@@ -1,21 +1,20 @@
 /* Setting default font to website */
 
 * {
+    box-sizing: border-box;
+    font-family: Kaisei Decol, Calibri, serif;
     margin: 0;
     padding: 0;
-    font-family: Kaisei Decol, Calibri, serif;
-    box-sizing: border-box;
 }
 
 body {
+    background-color: white;
+    display: block;
     margin: 0px;
-    width: 100%;
-    padding: 0px;
     max-width: 100%;
     overflow-x: hidden;
+    padding: 0px;
     position: relative;
-    display: block;
-    background-color: white;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -24,6 +23,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: 100%;
 }
 
 button {
@@ -35,8 +35,8 @@ button:hover {
 }
 
 a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
 }
 
 abbr {
@@ -54,8 +54,8 @@ li {
 }
 
 a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
 }
 
 /* navbar styling */
@@ -65,19 +65,19 @@ header {
 /* navbar basic styling */
 
 #navbar {
-    width: 100%;
-    padding: 0 2% 0 0.5%;
-    height: 4vw;
+    align-content: center;
+    align-items: center;
     background-color: white;
+    box-shadow: 0px 4px 4px;
     display: flex;
     gap: 2vw;
-    align-items: center;
-    align-content: center;
-    /* justify-content: space-between; */
-    transition: 0.3s;
+    height: 4vw;
+    padding: 0 2% 0 0.5%;
     position: fixed;
     top: 0;
-    box-shadow: 0px 4px 4px;
+    /* justify-content: space-between; */
+    transition: 0.3s;
+    width: 100%;
     z-index: 10;
 }
 
@@ -86,107 +86,106 @@ header {
 }
 
 #logo1 {
-    margin-top: 0vw;
-    height: 4.5vw;
     flex: 1;
+    height: 4.5vw;
+    margin-top: 0vw;
 }
 
 .right-header {
-    display: flex;
-    justify-content: space-between;
-    flex: 2;
     align-items: center;
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
     margin-right: 1vw;
 }
 
 .links {
-    display: flex;
     align-items: center;
-    font-family: "Inter";
     color: #6a5d5d;
-    gap: 2.5vw;
-    font-weight: bold;
+    display: flex;
+    font-family: "Inter";
     font-size: 1.6vw;
+    font-weight: bold;
+    gap: 2.5vw;
     text-shadow: 2px 2px 1px rgb(194, 183, 183);
 }
 /* hover effect on big screens */
 
 .links a:hover {
-    padding: 0.5vw;
-    border-radius: 0.7vw;
-    text-shadow: 2px 2px 1px rgb(199, 198, 198);
     background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 50% 4px;
-    background-position: bottom;
+    border-radius: 0.7vw;
+    padding: 0.5vw;
+    text-shadow: 2px 2px 1px rgb(199, 198, 198);
 }
 
 .links a:active {
     background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 50% 4px;
-    background-position: bottom;
 }
 
 /* Language change style */
 .right-header-element select {
-    border-radius: 0.5vw;
-    padding: 3px 9px 3px 9px;
-    box-shadow: 2px 2px 1px black;
-    border: none;
     background-color: lightgrey;
+    border: none;
+    border-radius: 0.5vw;
+    box-shadow: 2px 2px 1px black;
+    padding: 3px 9px 3px 9px;
     text-shadow: inherit;
 }
 
 .pic {
-    height: 2vw;
-    border-radius: 1.25vw;
-    border-width: 0.125vw;
-    border-style: solid;
     border-color: rgb(129, 129, 191);
+    border-radius: 1.25vw;
+    border-style: solid;
+    border-width: 0.125vw;
     cursor: pointer;
+    height: 2vw;
 }
 
 .toggle_btn {
-    font-size: 1.5vw;
     cursor: pointer;
     display: none;
+    font-size: 1.5vw;
 }
 
 /* Drop down list style which is visible on mobile */
 .dropdown_menu {
+    border-radius: 10px;
     display: none;
+    height: 0px;
+    overflow: hidden;
+    padding: 0.5vw;
     position: fixed;
     right: 1.5vw;
     top: 4.5vw;
-    width: 200px;
-    height: 0px;
-    padding: 0.5vw;
-
-    border-radius: 10px;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    overflow: hidden;
+    width: 200px;
     z-index: 10;
 }
 
 .dropdown_menu li {
-    padding: 0.7vw;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     font-size: 2.5vh;
+    justify-content: center;
+    padding: 0.7vw;
 }
 
 .dropdown_menu.open {
-    height: fit-content;
-    background-color: #2c2e71;
-    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.6);
+    background-color: #2c2e71;
+    height: fit-content;
 }
 
 .dropdown_menu li {
-    position: relative;
     color: #3d4347;
+    position: relative;
 }
 
 /* Hover effect on drop down list */
@@ -195,17 +194,17 @@ header {
 }
 
 .dropdown_menu li:after {
-    content: "";
-    position: absolute;
-    width: 20%;
-    margin: 0 40% 4% 40%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
     background-color: #535759;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin: 0 40% 4% 40%;
+    position: absolute;
+    transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
+    width: 20%;
 }
 
 .dropdown_menu li:hover:after {
@@ -235,23 +234,23 @@ header {
 
 @media (max-width: 500px) {
     .dropdown_menu {
-        width: 90%;
         right: 2.5%;
+        width: 90%;
     }
 }
 
 /* style for underline class */
 .underline {
     background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 30% 7px;
-    background-position: bottom;
 }
 
 /* style for main */
 main {
-    margin-top: 5vw;
     background-color: white;
+    margin-top: 5vw;
     /* height: 1000px; */
 }
 
@@ -261,24 +260,24 @@ main {
     background-clip: text;
 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-family: Kadwa, Calibri, serif;
 
     font-size: 5vw;
-    text-align: center;
     font-style: normal;
     font-weight: 700;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
 }
 
 /* title paragraph style */
 
 .title p {
-    text-align: center;
     color: rgba(3, 5, 36, 0.46);
     font-size: 2.25vw;
     font-style: normal;
 
     font-weight: 700;
+    text-align: center;
 }
 
 /* types of ambulance header style */
@@ -304,22 +303,22 @@ main {
 
 /* selected ambulance image style */
 .selected-ambulance-img {
+    align-items: center;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .ambulances-img {
-    text-align: center;
+    cursor: pointer;
     font-size: 2vw;
     font-weight: 700;
-    cursor: pointer;
+    text-align: center;
 }
 .ambulance-img {
-    width: 12vw;
+    border-radius: 9vw;
     height: 10vw;
     padding: 1.5vw;
-    border-radius: 9vw;
+    width: 12vw;
 }
 
 .ambulance-img-figcaption {
@@ -331,10 +330,10 @@ main {
 }
 
 .ambulance-detail {
-    padding: 3vw;
     background: linear-gradient(135deg, #0092ee 0%, #203381 100%);
     border-radius: 2vw;
     flex: 4;
+    padding: 3vw;
 }
 
 .ambulance-detail > article > h1 {
@@ -354,33 +353,32 @@ main {
 
 /* selected ambulance detail style */
 .selected-ambulance-detail {
+    color: #fff;
     font-size: 2.5vw;
     line-height: 3vw;
-    color: #fff;
 }
 
 /* selected ambulance feature div style */
 
 .selected-ambulance-features-div {
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     text-align: center;
 }
 
 /* selected ambulance features style */
 
 .selected-ambulance-features {
-    width: 16vw;
-    height: 16vw;
+    background-color: #fff;
 
     border-radius: 9vw;
+    cursor: pointer;
+    height: 16vw;
     margin: 1vw 1.75vw 1vw 1.75vw;
     padding: 2vw;
-
-    background-color: #fff;
-    cursor: pointer;
+    width: 16vw;
 }
 
 /* selected ambulance feature images style */
@@ -408,19 +406,19 @@ main {
     background-clip: text;
 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 6vw;
     text-align: center;
+    -webkit-text-fill-color: transparent;
 }
 
 /* how it works section style */
 
 .how-it-works-section {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
     justify-content: space-evenly;
-    align-items: center;
     text-align: center;
 }
 
@@ -428,16 +426,16 @@ main {
 
 .how-it-works-section figure {
     display: flex;
-    gap: 1vw;
     flex-direction: column;
+    gap: 1vw;
     text-align: center;
 }
 
 /* how it works images style */
 
 .how-it-works-img {
-    width: auto;
     height: 15vw;
+    width: auto;
 }
 
 /* how it works figcaption style */
@@ -447,10 +445,10 @@ main {
 }
 
 .down-arrow {
-    position: absolute;
-    left: 90%;
-    top: 58%;
     height: 6vw;
+    left: 90%;
+    position: absolute;
+    top: 58%;
 }
 
 /* quote styling */
@@ -468,18 +466,18 @@ main {
     background: linear-gradient(to right, #0092ee 0%, #203381 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 6.5vw;
     line-height: 6.75vw;
     text-align: center;
+    -webkit-text-fill-color: transparent;
 }
 
 .customer-support-div {
     background-image: url("./images/CUSTOMER SUPPORT BACKGROUND.png"); /* The image used */
-    height: 75vw; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: 100vw;
+    height: 75vw; /* You must set a specified height */
     position: relative;
 }
 
@@ -495,17 +493,17 @@ main {
 
 /* customer support figure tag style */
 .customer-support-figure {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 /* customer support img style */
 
 .customer-support-img {
     height: 15vw;
-    width: 15vw;
     text-align: center;
+    width: 15vw;
 }
 
 /* 
@@ -515,8 +513,8 @@ main {
 
 @media (min-width: 1281px) {
     .how-it-works-img {
-        width: auto;
         height: 20vw;
+        width: auto;
     }
 }
 
@@ -536,11 +534,11 @@ main {
         background-size: 30% 5px;
     }
     .down-arrow {
-        rotate: -25deg;
+        height: 10vw;
         left: 87%;
+        rotate: -25deg;
 
         top: 47%;
-        height: 10vw;
     }
 }
 
@@ -566,10 +564,10 @@ main {
         font-size: 1.5vw;
     }
     .down-arrow {
-        rotate: -25deg;
-        left: 87%;
-        top: 45%;
         height: 10vw;
+        left: 87%;
+        rotate: -25deg;
+        top: 45%;
     }
 }
 /* Box animation that is used in social media profile and icons */
@@ -577,17 +575,17 @@ main {
     transition: 0.7s;
 }
 .box-1:hover {
+    box-shadow: 2px 2px 2px #000;
     transform: scale(1.05);
     z-index: 2;
-    box-shadow: 2px 2px 2px #000;
 }
 
 /* Footer style */
 .footer {
     background-image: linear-gradient(#0f2831, #37414c, #5361a6);
     color: white;
-    margin-bottom: -15px;
     font-family: Kadwa, Calibri, serif;
+    margin-bottom: -15px;
 }
 
 h2 {
@@ -605,9 +603,9 @@ ul {
 }
 
 .footer-options div {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .apk {
@@ -616,36 +614,36 @@ ul {
 }
 
 .social-contact {
-    width: 3.5vw;
     margin-left: 2vw;
+    width: 3.5vw;
 }
 
 @media (max-width: 650px) {
     .social-contact {
-        width: 3.5vh;
         margin-left: 2vw;
+        width: 3.5vh;
     }
 }
 
 .know-us h1,
 ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 /* download button style */
 .apk {
+    align-items: center;
     display: flex;
     gap: 1vw;
-    align-items: center;
 }
 .apk button {
-    display: flex;
-    border-radius: 0.5vw;
-    padding: 0.5vw;
-    text-align: center;
     align-items: center;
+    border-radius: 0.5vw;
+    display: flex;
+    padding: 0.5vw;
     padding: 1vw;
+    text-align: center;
 }
 
 button span {
@@ -668,8 +666,8 @@ button span {
 
 figure {
     margin: 0;
-    padding: 0;
     overflow: hidden;
+    padding: 0;
 }
 /* adding hover and animations in footer */
 .footer a:hover {
@@ -677,22 +675,22 @@ figure {
 }
 
 a {
+    color: #3d4347;
     display: inline-block;
     position: relative;
-    color: #3d4347;
 }
 
 .footer a:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
     background-color: #535759;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
+    width: 100%;
 }
 
 .footer a:hover:after {
@@ -887,9 +885,11 @@ input[type="number"] {
     animation-name: fadeInUp;
 }
 
+/* If any problem faced during scrolling comment there line of code 892 to 905 and uncomment 907 to 926 and also in js in last */
+
 .hidden {
-    transform: translateX(400%);
     filter: blur(3px);
+    transform: translateX(400%);
     transition: transform 1s ease;
 }
 
@@ -898,33 +898,29 @@ input[type="number"] {
 }
 
 .hidden.show {
-    transform: translateX(0);
     filter: blur(0px);
+    transform: translateX(0);
 }
 
-/* @media (min-width: 0px) {
-    .hidden:nth-of-type(odd) {
-        opacity: 0;
-        transform: translateX(100%);
-        filter: blur(1px);
-        transition: all 0.8s;
-    }
+/* .hidden:nth-of-type(odd) {
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(1px);
+    transition: all 0.8s;
+}
 
-    .hidden:nth-of-type(even) {
-        transform: translateX(-100%);
-        opacity: 0;
-        filter: blur(1px);
-        transition: all 0.8s;
-    }
+.hidden:nth-of-type(even) {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(1px);
+    transition: all 0.8s;
+}
 
-    .show:nth-of-type(odd),
-    .show:nth-of-type(even) {
-        opacity: 1;
-        transform: translateX(0%);
-        filter: blur(0px);
-    }
-
-    
+.show:nth-of-type(odd),
+.show:nth-of-type(even) {
+    opacity: 1;
+    transform: translateX(0%);
+    filter: blur(0px);
 } */
 
 @media (prefers-reduced-motion) {

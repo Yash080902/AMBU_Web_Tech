@@ -226,6 +226,8 @@ animatedEls.forEach((el) => observer.observe(el));
 
 // for sliding div animations
 
+// If any problem faced during scrolling comment there line 231 to 249 and uncomment 251 to 265 and also in css in last
+
 const boxes = document.querySelectorAll(".hidden");
 
 window.addEventListener("scroll", checkBoxes);
