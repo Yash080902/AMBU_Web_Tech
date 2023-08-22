@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&family=Kadwa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
+*,body{
+padding: 0;
+margin: 0;
+text-decoration: none;
+} 
+button:hover{
+  cursor: pointer;
+}
+ /*navbar starts here */
+nav{
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content:flex-start;
+flex-direction: row;
+height: 4.5rem;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 999;
+box-shadow: 0 8px 10px 0 rgba(0,0,0,.2);
+}
+.title a:hover {
+border-bottom: 5px solid rgb(48, 141, 255);
+}  
+.title a.active {
+border-bottom: 5px;
+border-bottom: 5px solid rgb(48, 141, 255);
+}
+.title{
+display: flex;
+flex-direction: row;
+align-items: center;
+background-color: #fff;
+}
+.title a{
+text-decoration: none;
+transition: 0.15s;
+font-family: "Jaldi", sans-serif;
+color: #000;
+background-color: #fff;
+font-size: xx-large;
+font-weight: 500;
+margin-left: 5rem;
+margin-right: 5rem;
+}
+.logo {
+height: inherit;
+width: auto;   
+}
+/* navbar ends here */
+
+
+
+
+
+
+
+
+/* first section */
+.top{
+display: flex;
+width: 100vw;
+height: auto;
+margin-bottom: 3rem;
+}
+/* left section of first section */
+.left{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 50vw;
+height: auto;
+z-index: 100;
+}
+.left #ambuvians{
+font-family: 'Inknut Antiqua', serif; 
+text-decoration: none;
+font-size: 70px;
+font-weight: 800;
+margin-top: 20%;
+margin-left: 5rem;
+width: max-content;
+height: fit-content;
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.left #slogan{
+text-decoration: none;
+font-size: 25px;
+width: 60%;
+height: auto;
+margin-left: 5rem;
+font-family: 'Inknut Antiqua', serif;
+color: #1e1e1e;
+}
+#facts{
+  width: 300px;
+  height: 75px;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  font-size: larger;
+  font-family: 'Inknut Antiqua', serif; 
+  border: 7px solid #48abe0;
+  color: #48abe0;
+  background: transparent;
+}
+/* right section of first section */
+.right{
+display: flex;
+position: relative;
+width: 50vw;
+height: min-content; 
+}
+#bg{
+position: absolute;
+right: 0;
+z-index: -1;
+width:100%;
+height:-webkit-fill-available;
+opacity: .9;
+}
+#am{
+margin-top: 18%;
+width: 42rem;
+height: max-content;    
+}
+/* reach-out section fixed in the bottom-left corner */
+.whatsapp{
+z-index: 500;
+position: fixed;
+display: flex;
+flex-direction: column;
+align-items: center;
+bottom: 40px;
+left: 10px;
+background: transparent;
+}
+.whatsapp img{
+width: 60px;
+transition: all ease 0.15s;
+background:transparent;
+}
+#call{
+width: 50px;
+padding: 10px;
+}
+.whatsapp img:hover{
+transform: scale(1.2);
+}
+/* reach-out section ends */
+/* our vision section */
+.vision{
+margin-top: 20px;
+background-image: url('home_assets/our_vision.png');
+background-repeat:no-repeat;
+background-size: cover;
+width: 100vw;
+right: 0;
+height: 500px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.vision_img{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.vision_img img{
+padding-left: 7rem;
+padding-right:7rem;
+/* float: left; */
+width:  auto;
+height: 200px;
+object-fit: cover;
+}
+#our-vision{
+font-family: "Jaldi", sans-serif;
+font-size:65px;
+font-weight: bold;
+color: #fff;
+text-decoration: none;
+margin-bottom: 2rem;
+}
+.section1,.section2,.section3{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.section1 a,.section2 a,.section3 a{
+text-decoration: none;
+}
+#section-upper-text{
+color: #fff;
+font-family: 'Jaldi', sans-serif;
+font-size: 1.3rem;
+}
+#section-lower-text{
+color: #fff;
+font-family: 'Jaldi', sans-serif;
+font-weight: bolder;
+font-size: 2rem;
+}
+/* our vision section ends here */
+
+/* Why choose us section */
+.choose{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 2rem;
+}
+#why_us{
+font-family: 'Inknut Antiqua', serif;
+text-decoration: none;
+color: #000;
+font-size: 4rem;
+}
+.low{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+width: 100vw;
+}
+.partone,.parttwo{
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+  flex-direction: row;
+}
+.low img{
+height: auto;
+max-width: 12rem;
+transition: .15s all ease;
+}
+.low img:hover{
+transform: scale(.9);
+}
+.one,.two,.three,.four{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.low a{
+text-decoration: none;
+font-weight: bolder;
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Why choose us section ends here */
+/* coming soon */
+.coming{
+display: flex;
+justify-content:space-evenly;
+align-items: center;
+margin-top: 5rem;
+}
+.coming img{
+height: auto;
+max-width: 25rem; 
+}
+.coming a{
+text-decoration: none;
+height: fit-content;
+font-family: 'Inknut Antiqua', serif;
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.right_txt{
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: 'Jaldi', sans-serif;
+font-weight: 800;
+font-size: 4rem;
+}
+/* coming soon section ends here */
+/* why we come section & our partners section*/
+.come,.ourPartners{
+display: flex;
+margin-top: 3rem;
+align-items: center;
+justify-content: center; 
+}
+.come a,.ourPartners a{
+font-weight: 900;
+font-family: 'Inknut Antiqua',serif;
+font-size: 4rem;
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.news1,.news2,.partners{
+display:flex ;
+align-items: center;
+justify-content:space-evenly;
+flex-direction: row;
+}
+.news1 img,.news2 img,.partners img{
+height: auto;
+max-width: 33vw;
+padding-left: .5rem;
+padding-right: .5rem;
+transition: .15s all ease;
+}
+
+.news1 img:hover,.news2 img:hover{
+transform: scale(1.1);
+}
+/* why we come section & our partners section end here */
+/* director's note section */
+.note{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+width: 100vw;
+border-radius: 3rem;
+height: 400px;
+margin-top: 5rem;
+}
+.leftnote{
+background-color: aliceblue;
+width: 20%;
+height: 80%;
+border-top-left-radius: 3rem;
+border-bottom-right-radius: 3rem;
+}
+.rightnote{
+display: flex;
+width: 60%;
+height: 90%;
+flex-direction: column;
+margin-left: 2%;
+}
+#dir{
+align-self: flex-start;
+font-family:'Times New Roman', Times, serif;
+color: #fff;
+font-size:3.6rem;
+font-weight:100;
+}
+#yash{
+font-family: 'Times New Roman', Times, serif;
+color: #f00;
+font-size: 2.6rem;
+align-self: center;
+}
+#ed{
+font-family:Georgia, 'Times New Roman', Times, serif;
+color: #fff;
+font-size: 1.6rem;
+align-self: center;
+}
+#aim{
+align-self: center;
+font-family: 'Times New Roman', Times, serif;
+color: #fff;
+font-size: 1.6rem;
+margin-top: 3%;
+}
+#good{
+align-self: center;
+font-family: 'Times New Roman', Times, serif;
+color:#fff;
+font-size: 1.5rem;
+margin-top: 5%;
+}
+#mr{
+text-decoration: underline;
+color: #fff;
+font-family: 'Times New Roman', Times, serif;
+font-size: 1.4rem;
+align-self: flex-end;
+}
+/* Director's note section ends here */
+/* Subscribe to our mail section */
+.submail{
+width: 90%;
+border-style:dashed;
+border-color: #888;
+height:max-content;
+margin-left: 5%;
+margin-top: 5rem;
+display: flex;
+flex-direction: column; 
+}
+.submail a{
+justify-self: flex-start;
+align-self: center;
+}
+.submail #subscribe{
+font-size: 2.5rem;
+font-weight: bolder;
+font-family: 'Jaldi', sans-serif;
+max-height: fit-content;
+}
+.submail #tips{
+color: #888;
+font-size: 2.5dvw;
+font-weight: lighter;
+font-family: 'Jaldi', sans-serif;
+}
+.emails,.numbers{
+margin-left: 4.5%;
+margin-top: .5%;
+width: 60dvw;
+height: 6dvh;
+display: flex;
+}
+#inputmail{
+height: inherit;
+width: 50dvw;
+background-color: #ddd;
+border: none;
+text-decoration-color: #000;
+font-size: larger;
+padding-left: 2%;
+}
+#arrow{
+background: -webkit-linear-gradient(0deg,#48abe0 0%, #00478f 100%);
+width: 10dvw;
+border: none;
+justify-content: center;
+}
+.or{
+display: flex;
+align-items: center;
+margin-left: 4.5%;
+}
+#hrone{
+width: 20vw;
+}
+#h2{
+font-family: 'Jaldi', sans-serif;
+padding: 10px;
+}
+.numbers{
+margin-bottom: 3%;
+}
+/* mail section ends here */
+
+/* media queries for page */
+@media only screen and (max-width: 1365px) {
+.left{
+  padding-left: 2%;
+}
+#am{
+  width: 35rem;
+  height: max-content;
+}
+.left #slogan{
+  width: 65%;
+  font-size: 20px;
+}
+}
+@media only screen and (max-width: 1270px){
+  .rightnote{
+    width: 50%;
+  }
+  .leftnote{
+    width: 30%;
+  }
+  
+  .vision_img img{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .left #ambuvians{
+    font-size: 60px;
+  }
+  .come a{
+    font-size: 3rem;
+  }
+  .news1,.news2 {
+    flex-direction: column;
+  }
+  .news1 img,.news2 img{
+    max-width: 30vw;
+    padding: 1rem;
+  }
+  .low img{
+    max-width: 8rem;
+    height: auto;
+  }
+  .coming img{
+    max-width: 20rem;
+    height: auto;
+  }
+  .coming a{
+    font-size: 3rem;
+  }
+  .section3 img{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .whywecome{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1120px){
+  /* change later from here */
+  .top{
+    position: relative;
+    
+  }
+  .left{
+    position: absolute;
+    /* align-items: start; */
+    width: 100%;
+
+  }
+  .right{
+   width: 100%;
+   opacity: .7;
+  }
+  #am{
+    opacity: .7;
+  }
+  /* change till here */
+  #why_us{
+    font-size: 1.8rem;
+    
+  }
+  .low{
+    flex-direction: column;
+    
+  }
+  .low img{
+    padding: 1rem;
+  }
+  .low a{
+    font-size: .7rem;
+  }
+  .right_txt{
+    flex-direction: row;
+    
+  }
+  .right_txt a{
+    padding-left: .5rem;
+    font-size: 1.8rem;
+  }
+  .coming{
+    flex-direction: column-reverse;
+  }
+  .coming img{
+    margin-top: .5rem;
+    max-width: 15rem;
+  }
+  .come a,.ourPartners a{
+    font-size: 2rem;
+  }
+  .partners{
+    flex-direction: column;
+  }
+  .partners img{
+    padding: 1rem;
+    max-width: 50%;
+    height: auto;
+    justify-content: center;
+  }
+  .vision_img img{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 100px;
+  }
+  #section-lower-text{
+    font-size: 1.5rem;
+  }
+  .submail #subscribe{
+    font-size: 1.5rem;
+  }
+  .emails,.numbers{
+    height: 5dvh;
+    font-size:x-small;
+  }
+}
+
+/* footer section css code starts here*/
+.footer {
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    position: relative;
+    margin-top: 2rem;
+    z-index: 501;
+  }
+  /* footer header */
+  .footer-header {
+    display: flex;
+    justify-content: center;
+  }
+  .ambu-footer-quote h3{
+    color: white;
+    font-size: 0.8em;
+    font-size: 10px;
+    margin: 8px 0px 8px 0px;
+    text-align: center;
+  }
+  /* download from appstore and playstore*/
+  .download {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .download img {
+    margin-right: 0px;
+  }
+  .download .appstore img {
+    height: auto;
+    width: 200px;
+  }
+  .download .playstore {
+    margin-top: 63px;
+  }
+  .download .playstore img {
+    height: 65px;
+    width: 180px;
+  }
+  /* copy right section*/
+  .copyright {
+    color: white;
+    font-size: 1vw;
+    padding: 5px;
+  }
+  .contact-us img:hover {
+    cursor: pointer;
+  }
+  .connect img:hover {
+    cursor: pointer;
+    scale: 1.3;
+    transition: 0.15s;
+  }
+  .download img:hover {
+    cursor: pointer;
+  }
+  /* different ViewPorts media queries */
+  /* for mobile */
+  @media only screen and (max-width: 600px) {
+  .footer-header img {
+    height: 20px;
+    margin: 4px 3px 0px 0px;
+    width: 20px;
+  }
+  .footer-header .ambu-footer-quote h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+  /* us section for mobile devices */
+  .us {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 5px;
+  }
+  .us a {
+    color: white;
+    padding-left: 5px;
+    text-decoration: none;  
+  }
+  .us p {
+    font-size: 0.7em;
+  }
+  .us p a:hover {
+    box-shadow: 1px 1px  black;
+    scale: 2;
+    transition: 0.15s;
+  }
+  /* Know us section for mobile devices */
+  .us .know-us {
+    flex: 25%;
+  }
+  .us h2 {
+    font-size: 0.9em;
+  }
+  .us img {
+    height: 20px;
+    margin-right: 5px;
+    width: 20px;
+  }
+  /* services section for mobile devices */
+  .us .services {
+    flex: 25%;
+  }
+  /* contact us section for mobile devices */
+  .us .contact-us {
+    flex: 40%;
+  }
+  .address abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .mail abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .phone abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .phone img {
+    margin-top: 5px;
+  }
+  /* connect from us section for mobile devices */
+  .connect p {
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .connect .icons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .connect img {
+    width: 25px;
+    height: auto;
+  }
+  /* download our app section for mobile devices */
+  .download .appstore img {
+    border-radius: 5px;
+    height: 38px;
+    margin-right: 10px;
+    margin-top: 7px;
+    width: 120px;
+  }
+  .download .playstore {
+    margin-top: 0px;
+  }
+  .download .playstore img {
+    border-radius: 4px;
+    height: 46px;
+    width: 125px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
+  }
+  @media only screen and (min-width: 601px) {
+  .footer-header img {
+    height: 30px;
+    margin: 12px 3px 0px 0px;
+    width: 30px;
+  }
+  .footer-header .ambu-footer-quote h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+  /* contact us section for viewport bigger than mobile */
+  .us {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 5px;
+  }
+  .us a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .us p {
+    font-size: 1em;
+  }
+  .us p a:hover {
+    box-shadow: -1px 2px 1px black;
+    scale: 2;
+    transition: 0.15  s;
+  }
+  .us .know-us {
+    flex: 35%;
+  }
+  .us h2 {
+    font-size: 1.2em;
+  }
+  .us img {
+    height: 20px;
+    margin-right: 5px;
+    width: 20px;
+  }
+  .us .services {
+    flex: 35%;
+  }
+  .us .contact-us {
+    flex: 35%;
+  }
+   .address abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .mail abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .phone abbr {
+    display: flex;
+    margin: 0px 0px;
+  }
+  .phone img {
+    margin-top: 5px;
+  }
+  .connect p {
+    color: white;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    text-align: center;
+  }
+  .connect .icons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .connect img {
+    height: auto;
+    width: 30px;
+  }
+  .connect .first-icon {
+    margin: 0px 40px;
+  }
+  .connect .second-icon {
+    margin: 0px 40px;
+  }
+  .connect .third-icon {
+    margin: 0px 40px;
+  }
+  .connect .fourth-icon {
+    margin: 0px 40px;
+  }
+  .download .appstore img {
+    border-radius: 5px;
+    height: 38px;
+    margin-right: 10px;
+    margin-top: 7px;
+    width: 120px;
+  }
+  .download .playstore {
+    margin-top: 0px;
+  }
+  .download .playstore img {
+    border-radius: 4px;
+    height: 46px;
+    width: 125px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+  }
+  /* CSS Code Ends here */
