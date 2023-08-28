@@ -37,61 +37,83 @@ toggleBtn.addEventListener("click", () => {
 // making an array of objects that contain all ambulance data
 
 let ambulancesList = [
+    // formate of writing ambulance data
+
+    //  {
+    //     id: id of ambulance,
+    //     name: name of ambulance that is used in image,
+    //     fullName: full name of ambulance,
+    //     detail:detail of ambulance,
+    //     features:[
+    //         ["feature1 name", "feature1 deatil1","feature1 deatil2",...],
+    //         ["feature2 name", "feature2 deatil1","feature2 deatil2",...],
+    //         ["feature3 name", "feature3 deatil1","feature3 deatil2",...],
+    //         ["feature4 name", "feature4 deatil1","feature4 deatil2",...],
+    //         .
+    //         .
+    //         .
+    //     ],
+    // }
     {
+        id: 1,
         name: "ALS",
         fullName: "Advance Life Support",
         detail: `Large vehicle <br>
         Advance Life Support is used for critical
         patients`,
         features: [
-            "Defibrillator",
-            "Medicines",
-            "Stretcher",
-            "Nurse",
-            "Bandages",
-            "Oxygen Supply",
+            ["Defibrillator", "adhh", "asdhas", "asdghasud"],
+            ["Medicines", "adhh", "asdhas", "asdghasud"],
+            ["Stretcher", "adhh", "asdhas", "asdghasud"],
+            ["Nurse", "adhh", "asdhas", "asdghasud"],
+            ["Bandages", "adhh", "asdhas", "asdghasud"],
+            ["Oxygen Supply", "adhh", "asdhas", "asdghasud"],
         ],
     },
     {
+        id: 2,
+
         name: "BLS",
         fullName: "Basic Life Support",
         detail: `Basic vehicle <br>
         Basic Life Support is used to provide Basic support`,
         features: [
-            "Medicines",
-            "Stretcher",
-            "Nurse",
-            "Bandages",
-            "Oxygen Supply",
-            "Defibrillator",
+            ["Medicines", "adhh", "asdhas", "asdghasud"],
+            ["Stretcher", "adhh", "asdhas", "asdghasud"],
+            ["Nurse", "adhh", "asdhas", "asdghasud"],
+            ["Bandages", "adhh", "asdhas", "asdghasud"],
+            ["Oxygen Supply", "adhh", "asdhas", "asdghasud"],
+            ["Defibrillator", "adhh", "asdhas", "asdghasud"],
         ],
     },
     {
+        id: 3,
         name: "PTS",
         fullName: "Patient Transport Service",
         detail: `Medium vehicle <br>
         Patient Transport Service is used for transporting patients`,
         features: [
-            "Stretcher",
-            "Nurse",
-            "Bandages",
-            "Oxygen Supply",
-            "Defibrillator",
-            "Medicines",
+            ["Stretcher", "adhh", "asdhas", "asdghasud"],
+            ["Nurse", "adhh", "asdhas", "asdghasud"],
+            ["Bandages", "adhh", "asdhas", "asdghasud"],
+            ["Oxygen Supply", "adhh", "asdhas", "asdghasud"],
+            ["Defibrillator", "adhh", "asdhas", "asdghasud"],
+            ["Medicines", "adhh", "asdhas", "asdghasud"],
         ],
     },
     {
+        id: 4,
         name: "MA",
         fullName: "Medium vehicle",
         detail: `Medium vehicle <br>
         MA is used for transporting patients`,
         features: [
-            "Nurse",
-            "Bandages",
-            "Oxygen Supply",
-            "Defibrillator",
-            "Medicines",
-            "Stretcher",
+            ["Nurse", "adhh", "asdhas", "asdghasud"],
+            ["Bandages", "adhh", "asdhas", "asdghasud"],
+            ["Oxygen Supply", "adhh", "asdhas", "asdghasud"],
+            ["Defibrillator", "adhh", "asdhas", "asdghasud"],
+            ["Medicines", "adhh", "asdhas", "asdghasud"],
+            ["Stretcher", "adhh", "asdhas", "asdghasud"],
         ],
     },
 ];
@@ -122,6 +144,9 @@ document.querySelector(".ALS-ambulance-img").style.background =
 
 // adding click functionality to all ambulance
 
+let previousSelectedElementH = 1; // previous selected element for creating html
+let currentSelectedElementH = 1; // current selected element for creating html
+
 document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
     ambulance.addEventListener("click", () => {
         // js that change background color of selected ambulance by setting bgc of selected ambulance and removing from other
@@ -146,7 +171,6 @@ document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
         // rotating img trial
 
         const image = "." + `${ambulance.dataset.name}` + "-ambulance-img";
-        console.log(image);
         document.querySelector(
             image
         ).src = `images/ambulance/${ambulance.dataset.name}.gif`;
@@ -159,21 +183,65 @@ document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
                 // creating html of features of selected ambulance
 
                 let featuresHTML = "";
+
                 ambulances.features.forEach((feature) => {
+                    let featuresBackHTML = "";
+                    featuresBackHTML += `<h3>${feature[0]} </h3><br>`;
+                    for (let i = 1; i < feature.length; i++) {
+                        featuresBackHTML += `<p>${feature[i]}</p>`;
+                    }
+
                     featuresHTML += `<abbr title="Ambulance Features">
-                <figure class="selected-ambulance-features">
-                  <img src="images/ambulance/features/${
-                      ambulances.name
-                  }/FEATURES ${
+
+                    <div class="flip-card selected-ambulance-features">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="images/ambulance/features/${
+                              ambulances.name
+                          }/FEATURES ${
                         ambulances.features.indexOf(feature) + 1
-                    }.png" alt="" class="selected-ambulance-feature-img">
-                  <p class="selected-ambulance-feature-p">${feature}</p>
-                </figure>
-              </abbr>`;
+                    }.png" alt=""
+                            class="selected-ambulance-feature-img">
+                          <p class=".selected-ambulance-feature-p">${
+                              feature[0]
+                          }</p>
+    
+                        </div>
+                        <div class="flip-card-back">
+                          ${featuresBackHTML}
+                        </div>
+                      </div>
+                    </div>
+    
+                  </abbr>`;
                 });
 
                 // adding ambulance detail to ambulance-detail class
-                document.querySelector(".ambulance-detail").innerHTML = `
+
+                //making ambulance-detail to empty so that animation can work
+                document.querySelector(".ambulance-detail").innerHTML = ``;
+
+                ambulancesList.forEach((ambu) => {
+                    if (ambulance.dataset.name === ambu.name) {
+                        currentSelectedElementH = ambu.id;
+                    }
+                });
+                let time = 0;
+
+                if (currentSelectedElementH !== previousSelectedElementH) {
+                    time = 1000;
+                }
+
+                ambulancesList.forEach((ambu) => {
+                    if (ambulance.dataset.name === ambu.name) {
+                        previousSelectedElementH = ambu.id;
+                    }
+                });
+
+                //using setTimeout after the flipping animation is over to fill ambulance-detail
+
+                setTimeout(() => {
+                    document.querySelector(".ambulance-detail").innerHTML = `
                 <article>
         <!-- full name of ambulance -->
         <h1 class="ambulance-detail-h1">${ambulances.fullName}</h1>
@@ -202,9 +270,106 @@ document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
         </div>
         </article>
                 `;
+                }, time);
             }
         });
     });
+});
+
+// flipping animation js
+
+let previousSelectedElementA = 1; // previous selected element for animation
+let currentSelectedElementA = 1; // current selected element for animation
+
+document.querySelectorAll(".js-ambulance").forEach((ambulance) => {
+    ambulance.addEventListener("click", () => {
+        ambulancesList.forEach((ambu) => {
+            if (ambulance.dataset.name === ambu.name) {
+                currentSelectedElementA = ambu.id;
+            }
+        });
+
+        if (currentSelectedElementA > previousSelectedElementA) {
+            document
+                .querySelector(".ambulance-detail")
+                .classList.add("rightFlip");
+        }
+        if (currentSelectedElementA < previousSelectedElementA) {
+            document
+                .querySelector(".ambulance-detail")
+                .classList.add("leftFlip");
+        }
+
+        ambulancesList.forEach((ambu) => {
+            if (ambulance.dataset.name === ambu.name) {
+                previousSelectedElementA = ambu.id;
+            }
+        });
+
+        setTimeout(() => {
+            document
+                .querySelector(".ambulance-detail")
+                .classList.remove("leftFlip");
+
+            document
+                .querySelector(".ambulance-detail")
+                .classList.remove("rightFlip");
+        }, 1000);
+    });
+});
+
+let quotes = [
+    `"Future holds transformative services and technologies that will reshape the world."`,
+    `"At Ambuvians, healthcare is not just a service, but a promise of well-being."`,
+    `"Caring today for a healthier tomorrow, Ambuvians redefines healthcare."`,
+];
+
+let quotesNo = 0;
+
+setInterval(() => {
+    document.querySelector(".text-box-h").innerText = quotes[quotesNo];
+
+    quotesNo = quotesNo < quotes.length - 1 ? quotesNo + 1 : 0;
+}, 5000);
+
+document.querySelector(".contact-us-form").addEventListener("click", () => {
+    document.querySelector(".form").style.display = "block";
+});
+
+document.querySelector(".submit").addEventListener("click", () => {
+    document
+        .querySelectorAll(".form-input")
+        .forEach((input) => (input.value = ""));
+
+    document.querySelector(".form").innerHTML = `
+    <div class="form-item" data-animation="fadeOff">
+      <div>
+        <figure><img src="/images/ambu logo.png" alt="ambu logo" class="form-logo"></figure>
+      </div>
+
+      <div>
+        <h1>Thank You</h1>
+      </div>
+
+      <div>
+        <p class="form-para-1">Our team will get back
+          to you shortly !
+        </p>
+      </div>
+
+
+
+      <p class="form-para-2">Stay Tuned</p>
+
+    </div>`;
+    // document.querySelector(".form-dropdown").option.value = "Select";
+
+    document.querySelector(".form").classList.add("fade1");
+    document.querySelector(".form").classList.add("fadeOff");
+
+    setInterval(() => {
+        document.querySelector(".form").style.display = "none";
+    }, 8000);
 });
 
 // for Fade animations
@@ -228,25 +393,25 @@ animatedEls.forEach((el) => observer.observe(el));
 
 // If any problem faced during scrolling comment there line 231 to 249 and uncomment 251 to 265 and also in css in last
 
-const boxes = document.querySelectorAll(".hidden");
+// const boxes = document.querySelectorAll(".hidden");
 
-window.addEventListener("scroll", checkBoxes);
+// window.addEventListener("scroll", checkBoxes);
 
-checkBoxes();
+// checkBoxes();
 
-function checkBoxes() {
-    const triggerBottom = (window.innerHeight / 5) * 4;
+// function checkBoxes() {
+//     const triggerBottom = (window.innerHeight / 5) * 4;
 
-    boxes.forEach((box) => {
-        const boxTop = box.getBoundingClientRect().top;
+//     boxes.forEach((box) => {
+//         const boxTop = box.getBoundingClientRect().top;
 
-        if (boxTop < triggerBottom) {
-            box.classList.add("show");
-        } else {
-            box.classList.remove("show");
-        }
-    });
-}
+//         if (boxTop < triggerBottom) {
+//             box.classList.add("show");
+//         } else {
+//             box.classList.remove("show");
+//         }
+//     });
+// }
 
 // const observer1 = new IntersectionObserver((entries) => {
 //     entries.forEach((entry) => {

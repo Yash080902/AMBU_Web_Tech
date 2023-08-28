@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Kaisei Decol, Calibri, serif;
+    /* font-family: "Kaisei Decol", Calibri, serif; */
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,6 @@ body {
     background-color: white;
     display: block;
     margin: 0px;
-    max-width: 100%;
     overflow-x: hidden;
     padding: 0px;
     position: relative;
@@ -77,7 +76,7 @@ header {
     top: 0;
     /* justify-content: space-between; */
     transition: 0.3s;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
 }
 
@@ -101,24 +100,27 @@ header {
 
 .links {
     align-items: center;
-    color: #6a5d5d;
+    color: #878787;
     display: flex;
     font-family: "Inter";
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     font-weight: bold;
     gap: 2.5vw;
-    text-shadow: 2px 2px 1px rgb(194, 183, 183);
+    font-family: "Kaisei Decol", Calibri, serif;
+}
+
+.link a {
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    -ms-transition: color 1s ease-out;
+    transition: color 1s ease-out;
 }
 /* hover effect on big screens */
 
 .links a:hover {
-    background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 50% 4px;
     border-radius: 0.7vw;
-    padding: 0.5vw;
-    text-shadow: 2px 2px 1px rgb(199, 198, 198);
+    color: black;
 }
 
 .links a:active {
@@ -130,12 +132,14 @@ header {
 
 /* Language change style */
 .right-header-element select {
-    background-color: lightgrey;
+    background: white;
+
     border: none;
     border-radius: 0.5vw;
-    box-shadow: 2px 2px 1px black;
-    padding: 3px 9px 3px 9px;
+    /* box-shadow: 2px 2px 1px black; */
     text-shadow: inherit;
+    width: max-content;
+    font-family: "Kaisei Decol", Calibri, serif;
 }
 
 .pic {
@@ -174,6 +178,7 @@ header {
     font-size: 2.5vh;
     justify-content: center;
     padding: 0.7vw;
+    font-family: "Kaisei Decol", Calibri, serif;
 }
 
 .dropdown_menu.open {
@@ -241,7 +246,7 @@ header {
 
 /* style for underline class */
 .underline {
-    background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+    background: linear-gradient(90deg, #0097f2 0%, #0c65ba 50%, #1d3888 100%);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 30% 7px;
@@ -273,6 +278,7 @@ main {
 
 .title p {
     color: rgba(3, 5, 36, 0.46);
+    font-family: "Kaisei Decol", Calibri, serif;
     font-size: 2.25vw;
     font-style: normal;
 
@@ -282,6 +288,8 @@ main {
 
 /* types of ambulance header style */
 .ambulance-types h1 {
+    font-family: Kadwa, Calibri, serif;
+
     color: #000;
     font-size: 6vw;
     font-style: normal;
@@ -356,6 +364,7 @@ main {
     color: #fff;
     font-size: 2.5vw;
     line-height: 3vw;
+    font-family: "Kaisei Decol", Calibri, serif;
 }
 
 /* selected ambulance feature div style */
@@ -381,16 +390,194 @@ main {
     width: 16vw;
 }
 
-/* selected ambulance feature images style */
-
-.selected-ambulance-features img {
-    height: 7vw;
+.flip-card {
+    background-color: #fff;
+    border-radius: 9vw;
+    cursor: pointer;
+    height: 16vw;
+    margin: 1vw 1.75vw 1vw 1.75vw;
+    padding: 2vw;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-/* selected ambulance feature paragraph style */
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
 
-.selected-ambulance-feature-p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    color: black;
+}
+
+.flip-card-front p {
     font-size: 1.5vw;
+    font-family: "Kaisei Decol", Calibri, serif;
+}
+
+.flip-card-back h3 {
+    font-size: 1.8vw;
+    font-family: Kadwa, Calibri, serif;
+}
+.flip-card-back p {
+    font-size: 1.5vw;
+    font-family: "Kaisei Decol", Calibri, serif;
+}
+
+.flip-card-front img {
+    width: 9vw;
+    height: 80%;
+}
+
+/* Style the back side */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+@media (min-width: 1441px) {
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -1vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .flip-card {
+        width: 16vw;
+    }
+
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -1vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -2vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -2vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -3vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .flip-card-front p {
+        font-size: 1.5vw;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.5vw;
+        margin-bottom: -5vw;
+    }
+
+    .flip-card-back p {
+        font-size: 1.3vw;
+    }
+
+    .selected-ambulance-features {
+        height: 18vw;
+
+        width: 18vw;
+    }
+
+    .flip-card {
+        border-radius: 10vw;
+    }
 }
 
 /* how it works style */
@@ -441,7 +628,8 @@ main {
 /* how it works figcaption style */
 
 .how-it-works-figcaption {
-    font-size: 1vw;
+    font-size: 1.2vw;
+    font-family: "Kaisei Decol", Calibri, serif;
 }
 
 .down-arrow {
@@ -453,23 +641,51 @@ main {
 
 /* quote styling */
 .quote {
-    background-color: #eef1fd;
+    /* background-image: url("images/image\ 17.png"); */
+    /* background: url("videos/quote.mp4"); */
+    position: relative;
+    /* overflow: hidden; */
+    width: 100%;
+    height: 24vw;
 
     border: 0px solid #343cff;
     /* side bars effect */
     box-shadow: 7px 5px 4px 0px rgba(0, 0, 0, 0.25) inset;
-
-    padding: 2.5vw;
 }
 
-.quote h1 {
-    background: linear-gradient(to right, #0092ee 0%, #203381 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-size: 6.5vw;
-    line-height: 6.75vw;
+.quote video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.text-box {
+    position: absolute;
+    font-family: "Kaisei Decol", Calibri, serif;
+
+    width: 100%;
+    height: 101%;
+    padding: 2vw 0.5vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    font-size: 3.5vw;
     text-align: center;
-    -webkit-text-fill-color: transparent;
+
+    color: #000;
+    background: #fff;
+    mix-blend-mode: screen;
+
+    /* for black background */
+
+    /* color: #fff;
+    background: #000;
+    mix-blend-mode: multiply; */
 }
 
 .customer-support-div {
@@ -497,6 +713,9 @@ main {
     display: flex;
     flex-direction: column;
 }
+.customer-support-figcaption {
+    font-family: "Kaisei Decol", Calibri, serif;
+}
 
 /* customer support img style */
 
@@ -518,14 +737,40 @@ main {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .arrow {
+        width: 13.3vw;
+    }
+
+    .how-it-works-img {
+        width: 16.5vw;
+    }
+    .customer-support-figcaption {
+        font-size: 2vw;
+    }
+    .underline {
+        background-size: 30% 5px;
+    }
+    .down-arrow {
+        height: 10vw;
+        left: 87%;
+        rotate: -15deg;
+
+        top: 47%;
+    }
+}
+
 /* 
 ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px
 */
 
 @media (min-width: 481px) and (max-width: 768px) {
+    .how-it-works-img {
+        width: 16vw;
+    }
     .arrow {
-        width: 14vw;
+        width: 13vw;
     }
     .customer-support-figcaption {
         font-size: 2vw;
@@ -548,8 +793,11 @@ main {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .how-it-works-img {
+        width: 16vw;
+    }
     .arrow {
-        width: 14vw;
+        width: 13vw;
     }
 
     .customer-support-figcaption {
@@ -608,6 +856,84 @@ ul {
     flex-direction: column;
 }
 
+.contact-us-form {
+    background: linear-gradient(90deg, #e497db 0%, #6e71f5 100%);
+    padding: 0.5vw 2vw;
+    cursor: pointer;
+    margin-top: 2vw;
+    border-radius: 1.5vw;
+    font-size: 1.5vw;
+}
+.form {
+    background-color: #066899;
+    position: absolute;
+    padding: 2vw 3vw;
+    border-radius: 1vw;
+    bottom: 1%;
+    left: 35%;
+    width: 30vw;
+    height: 32vw;
+    z-index: 2;
+}
+
+.form h1 {
+    color: #fff;
+    font-size: 4vw;
+    text-align: center;
+}
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-content: center;
+    justify-content: center;
+}
+
+.form-item input,
+select {
+    padding-left: 1vw;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    border: none;
+    font-family: "Kaisei Decol", Calibri, serif;
+}
+
+.submit {
+    background-color: #d0bed2;
+    padding: 0.5vw 2vw;
+    border-radius: 0.5vw;
+    width: 13vw;
+    align-self: center;
+    text-align: center;
+}
+
+.form-logo {
+    background-color: #fff;
+    padding: 0.5vw;
+    text-align: center;
+    align-self: center;
+    border-radius: 1vw;
+    width: 23vw;
+}
+
+.form-para-1 {
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 0vw 1vw;
+    text-align: center;
+}
+
+.form-para-2 {
+    font-weight: 700;
+    background-color: #d0bed2;
+    font-size: 1.6vw;
+
+    padding: 0.5vw 2vw;
+    border-radius: 0.5vw;
+    width: 13vw;
+    align-self: center;
+    text-align: center;
+}
 .apk {
     display: flex;
     justify-content: center;
@@ -622,6 +948,10 @@ ul {
     .social-contact {
         margin-left: 2vw;
         width: 3.5vh;
+    }
+
+    .copy {
+        font-size: 2vw;
     }
 }
 
@@ -678,6 +1008,7 @@ a {
     color: #3d4347;
     display: inline-block;
     position: relative;
+    font-family: "Kaisei Decol", Calibri, serif;
 }
 
 .footer a:after {
@@ -696,6 +1027,90 @@ a {
 .footer a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1025px) {
+    .form-item input,
+    select {
+        font-size: 1.3vw;
+    }
+
+    .submit {
+        font-size: 1.3vw;
+        margin-top: 2vw;
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form {
+        width: 30vw;
+        height: 34vw;
+    }
+
+    .submit {
+        margin-top: 1.5vw;
+    }
+
+    .form-para-2 {
+        margin-top: 1.5vw;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .submit {
+        margin-top: 1.5vw;
+    }
+
+    .form-para-2 {
+        margin-top: 1.5vw;
+    }
+    .form-item input,
+    select {
+        font-size: 1.1vw;
+    }
+
+    .submit {
+        font-size: 1.3vw;
+        margin-top: 2vw;
+    }
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .form {
+        width: 30vw;
+        height: 35vw;
+    }
+    .submit {
+        margin-top: 1.5vw;
+    }
+
+    .form-para-2 {
+        margin-top: 1.5vw;
+    }
+    .form-item input,
+    select {
+        font-size: 1.1vw;
+    }
+
+    .submit {
+        font-size: 1.3vw;
+        margin-top: 2vw;
+    }
 }
 
 /* to remove up and down arrow in input tag */
@@ -834,6 +1249,29 @@ input[type="number"] {
     animation-name: fade;
 }
 
+.fade1 {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeOff {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOff {
+    -webkit-animation-name: fadeOff;
+    animation-name: fadeOff;
+    animation-delay: 4s;
+    animation-duration: 2s;
+}
+
 .animation-group-2 [data-animation] {
     opacity: 0;
 }
@@ -887,10 +1325,10 @@ input[type="number"] {
 
 /* If any problem faced during scrolling comment there line of code 892 to 905 and uncomment 907 to 926 and also in js in last */
 
-.hidden {
+/* .hidden {
     filter: blur(3px);
-    transform: translateX(400%);
-    transition: transform 1s ease;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
 }
 
 .hidden:nth-of-type(even) {
@@ -900,7 +1338,7 @@ input[type="number"] {
 .hidden.show {
     filter: blur(0px);
     transform: translateX(0);
-}
+} */
 
 /* .hidden:nth-of-type(odd) {
     opacity: 0;
@@ -927,4 +1365,38 @@ input[type="number"] {
     .hidden {
         transition: none;
     }
+}
+
+@keyframes leftFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    99% {
+        transform: rotateY(-180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.leftFlip {
+    transform: rotateY(-180deg);
+    animation: leftFlip 1s;
+}
+
+@keyframes rightFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    99.9% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.rightFlip {
+    animation: rightFlip 1s;
+    transform-style: preserve-3d;
 }
