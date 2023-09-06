@@ -391,27 +391,9 @@ animatedEls.forEach((el) => observer.observe(el));
 
 // for sliding div animations
 
-// If any problem faced during scrolling comment there line 231 to 249 and uncomment 251 to 265 and also in css in last
+// I have tried this scrolling effect code but it cause some problem in responsiveness in smaller screens thats why i comment it out both in css and js. if you want to see it your self uncomment effect one by one in both css and js file
 
-// const boxes = document.querySelectorAll(".hidden");
-
-// window.addEventListener("scroll", checkBoxes);
-
-// checkBoxes();
-
-// function checkBoxes() {
-//     const triggerBottom = (window.innerHeight / 5) * 4;
-
-//     boxes.forEach((box) => {
-//         const boxTop = box.getBoundingClientRect().top;
-
-//         if (boxTop < triggerBottom) {
-//             box.classList.add("show");
-//         } else {
-//             box.classList.remove("show");
-//         }
-//     });
-// }
+// starting Code for scrolling effect
 
 // const observer1 = new IntersectionObserver((entries) => {
 //     entries.forEach((entry) => {
@@ -428,3 +410,5 @@ animatedEls.forEach((el) => observer.observe(el));
 // hiddenElement.forEach((el) => {
 //     observer1.observe(el);
 // });
+
+// ending Code for scrolling effect
