@@ -1,0 +1,1072 @@
+
+/* external url for the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kadwa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* predefineing the colors for our webpages */
+:root {
+  --bg-color: #fff;
+  --main-color: #29fd53;
+  --text-color: #000000;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* for hide side scrollbar icon */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* navbar section */
+
+header {
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 1px 7px;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all .05s ease;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* css for logo */
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+
+.logo img {
+  height: auto;
+  padding-right: 6rem;
+  width: 250px;
+}
+
+/* css for nav links */
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 30px;
+  padding: 5px 0;
+  transition: all 0.50s ease;
+}
+
+.navbar a:hover {
+  background: linear-gradient(90deg, rgba(0,98,243,1) 0%, rgba(0,223,255,1) 100%, rgba(0,77,253,1) 100%);
+  background: rgb(0,98,243);
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+}
+
+.main {
+  align-items: center;
+}
+
+/* css for hamburger menu */
+
+#menu-icon {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 35px;
+  z-index: 10001;
+}
+
+/* media query for navbar to adjust according to the smaller viewport */
+
+@media (max-width: 770px) {
+
+  header {
+    font-family: kadwa;
+    justify-content: space-between;
+    padding: 0 2%;
+    transition: 0.2s;
+  }
+
+
+  #menu-icon {
+    background: linear-gradient(90deg, rgba(0,98,243,1) 0%, rgba(0,223,255,1) 100%, rgba(0,77,253,1) 100%);
+    background: rgb(0,98,243);
+    border-radius:10%;
+    display: block;
+  }
+
+  .navbar {
+    background: linear-gradient(90deg, rgba(0,98,243,1) 0%, rgba(0,223,255,1) 100%, rgba(0,77,253,1) 100%);
+    background: rgb(0,98,243);
+    border-radius: 10px;
+    flex-direction: column;
+    height:29vh;
+    justify-content: flex-start;
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    transition: all 0.50s ease;
+    width: 270px;
+  }
+
+  .navbar a {
+    color: white;
+    display: block;
+    margin: 0 20px;
+    margin: 12px 0;
+    padding: 0 25px;
+    padding: 5px 0;
+    transition: all 0.50s ease;
+  }
+
+  .navbar a:hover {
+    background: none;
+    scale: 1.2;
+    transform: translateX(4px);
+  }
+
+  .navbar a.active {
+    color: var(--text-color);
+  }
+
+  .navbar.open  {
+    right: 2%;
+  }
+}
+
+  /* main header company section that contains the company image and name */
+
+.company {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  
+}
+
+.company h1 {
+  font-family: inter;
+  font-size: 400%;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 4px red;
+  top: 15%;
+}
+
+.company img {
+  padding-top: 2%;
+  text-align: center;
+  width: 95%;
+}
+
+.company p {
+  bottom: 5%;
+  font-family: 'Kaisei Decol', serif;
+  font-size: 18px;
+  position: absolute;
+}
+
+/* company's feature m*/
+
+#feature h1 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  padding: 20px 0 100px;
+  text-align: center;
+}
+
+/* about us section */
+
+.about {
+  background-image: url(about-page-images/about-us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.about img {
+  display: none;
+}
+
+      /* main text that contains about us */
+
+.about .about-text {
+  font-size: 20px;
+  left: 60%;
+  position: relative;
+  width: 40%;
+}
+
+.about h1 {
+  color: #000;
+  font-family: Kadwa;
+  font-size: 180%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 0 0 3px rgb(97, 199, 247);
+}
+
+.about p {
+  background: linear-gradient(90deg, rgba(16,203,253,1) 0%, rgba(0,212,255,1) 0%, rgba(17,9,121,1) 100%);
+  background: rgb(16,203,253);
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Kalam', cursive;
+  margin-top: 30px;
+  padding: 30px;
+  width: 80%;
+}
+
+/* quotes of our company's */
+
+.quotes p {
+  color: #ff0000;
+  font-size: 150%;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* who we are */
+
+.about-we {
+  position: relative;
+
+}
+
+      /* main text that contains who we are */
+
+.about-we-text {
+  background-color: rgba(255,255,255,0.7);
+  border-color: #B6C7D6;
+  border-radius: 10px;
+  border-style: solid;
+  bottom: 0;
+  font-family: kadwa;
+  font-size: 20px;
+  height: 80%;
+  left:0;
+  letter-spacing: 2px;
+  line-height: 40px;
+  margin-bottom: auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: auto;
+  overflow-y: auto;
+  padding: 10px;
+  position: absolute;
+  right:0;
+  text-align: center;
+  top: 0;
+  width: 70%;
+}
+
+
+.about-we img {
+  width: 100%;
+}
+
+/* why choose us */
+
+.choose-us {
+  background-image: url(about-page-images/choose-us-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(5, 99, 161);
+  font-family: kadwa;
+}
+
+      /* main text and images that contains why choose us */
+
+.choose-us .choose-text {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.choose-us .choose-img {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 50px 0;
+}
+
+.img-one img {
+  width: 120px;
+}
+
+.img-two p { 
+  margin-top: 15px;
+  width:250px;
+}
+.img-two img {
+  width: 180px;
+}
+.img-three img {
+  width: 100px;
+  padding-top: 20px;
+}
+.img-four img {
+  width: 120px;
+}
+
+/* our company's teams */
+
+.meet-us h1 {
+  font-family: kadwa;
+  font-size: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.animate-char
+{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  background-clip: border-box;
+  background-clip: text;
+  background-image: linear-gradient(-225deg,#231557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+  background-size: 200% auto;
+  background-size: auto auto;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.item {
+  background: linear-gradient(90deg, rgba(211,78,227,1) 0%, rgba(4,51,158,1) 100%, rgba(0,223,255,1) 100%);
+  background: rgb(211,78,227);
+  border-radius: 60px 60px 5px 5px;
+  color: white;
+  cursor: pointer;
+  font-family: kadwa;
+  height: 100%;
+  left: 0;
+  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin: 0 10px;
+  position: relative;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.item i {
+  color: white;
+  display: none;
+  font-size: 24px;
+  margin: 0 10px 10px; 
+  opacity: 0;
+}
+
+.item a {
+  color: white;
+}
+
+.item h2 {
+  padding: 20px 0 5px 0;
+}
+
+.item p {
+  font-size: 20px;
+  padding: 0px 0 10px;
+}
+
+
+.item i:hover {
+  scale: 1.2;
+}
+
+.item:hover i {
+  display: inline-block;
+  opacity: 1;
+  transition: 0.5s;
+  
+}
+
+.item:hover {
+  animation: scale 1.5s ease;
+}
+
+@keyframes scale {
+  0% {
+      height:  100%;
+  }
+
+  100% {
+      height: 150%;
+  }}
+
+@media (max-width: 1024px) {
+ .item:hover {
+    animation: scale 1.5s ease;
+  }
+  
+  @keyframes scale {
+    0% {
+        height: 100%;
+    }
+  
+    100% {
+        height: 150%;
+    }
+}
+}
+
+/* our partners section that tie up with us*/
+
+.our-partners {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.our-partners h1 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background: linear-gradient(to right, #3f8de6,#21c3f5, #2639eb, #eedd44);
+  font-family: 'Kaisei Decol', serif;
+  font-size: 45px;
+}
+
+.our-partners .partners-logo {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.our-partners .partners-logo .logo-one {
+  height: 120px;
+  margin-top: 40px;
+  width: 130px;
+}
+
+.our-partners .partners-logo .logo-two {
+  height: 120px;
+  margin-top: 40px;
+  width: 240px;
+}
+
+/* footer section css code */
+  
+  .footer {
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  /* footer header */
+  
+  .footer-header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ambu-footer-quote h3{
+    color: white;
+    font-family: kadwa;
+    font-size: 0.8em;
+    font-size: 10px;
+    margin: 8px 0px 8px 0px;
+    text-align: center;
+  }
+
+  .us {
+    font-family: inter;
+  }
+
+  .us .contact-with-us {
+    font-size: 15px;
+    flex: 35%;
+    position: relative;
+    
+  }
+
+  .us .contact-with-us button {
+    background: linear-gradient(90deg, rgba(211,78,227,1) 0%, rgba(4,51,158,1) 100%, rgba(0,223,255,1) 100%);
+    background: rgb(211,78,227);
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    line-height: 35px;
+    margin-top: 20px;
+    text-align: center;
+    width: 160px;
+  }
+
+  #contact-us-popup {
+    background: #066899;
+    border-radius: 15px;
+    display: none;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: -300px;
+    width: 300px;
+  }
+
+  #contact-us-popup h2 {
+    color: white;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  #contact-us-popup input,select {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    width: 90%;
+  }
+
+  #contact-us-popup button {
+    background: #D0BED2;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    margin-left: 20%;
+    text-align: center;
+  }
+
+  #contact-us-popup img {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  #thanks-popup {
+    background: #066899;
+    border-radius: 15px;
+    display: none;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: -300px;
+    width: 300px;
+  }
+
+  #thanks-popup img {
+    height: 100px;
+    width: 90%;
+  }
+
+  #thanks-popup h1 {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+
+  #thanks-popup button {
+    background: #D0BED2;
+    font-size: 16px;
+    margin-left: 20%;
+  }
+  
+  /* download from appstore and playstore*/
+  
+  .download {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  
+  .download img {
+    margin-right: 0px;
+  }
+  
+  .download .appstore img {
+    height: auto;
+    width: 200px;
+  }
+  
+  .download .playstore {
+    margin-top: 63px;
+  }
+  .download .playstore img {
+    height: 65px;
+    width: 180px;
+  }
+  
+  /* copy right section*/
+  
+  .copyright {
+    color: white;
+    font-size: 1vw;
+    padding: 5px;
+  }
+  
+  .contact-us img:hover {
+    cursor: pointer;
+  }
+  
+  .connect img:hover {
+    cursor: pointer;
+    scale: 1.3;
+    transition: 0.6s;
+  }
+  
+  .download img:hover {
+    cursor: pointer;
+  }
+  
+  /* different ViewPorts media queries */
+
+      /* media query for the footer section */
+  
+  /* for mobile */
+  
+  @media only screen and (max-width: 600px) {
+    .footer-header img {
+      height: 20px;
+      margin: 4px 3px 0px 0px;
+      width: 20px;
+    }
+  
+    .footer-header .ambu-footer-quote h3 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+  
+    /* us section */
+  
+    .us {
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0px 5px;
+    }
+  
+    .us a {
+      color: white;        
+      text-decoration: none;
+    }
+  
+    .us p {
+      font-size: 0.5em;
+    }
+  
+    .us p a:hover {
+      box-shadow: 1px 1px  black;
+      font-size: 20px;
+      transition: 0.4s;
+    }
+  
+    /* Know us section */
+  
+    .us .know-us {
+      flex: 25%;
+    }
+  
+    .us h2 {
+      font-size: 0.7em;
+    }
+  
+    .us img {
+      height: 20px;
+      margin-right: 5px;
+      width: 20px;
+    }
+  
+    /* services section */
+  
+    .us .services {
+      flex: 25%;
+    }
+
+    /* contact with us section */
+
+    .us .contact-with-us {
+      flex: 35%;
+      margin: 0 5px 0 10px;
+    }
+
+    .us .contact-with-us h2 {
+      font-size: 10px;
+      padding: 1.5px 0px 0 0px;
+    }
+
+    .us .contact-with-us button {
+      font-size: 11px;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 10px;
+      width:80px;
+    }
+
+    #contact-us-popup {
+      width: 225px;
+    }
+
+    #contact-us-popup h2 {
+      font-size: 18px;
+    }
+
+    #contact-us-popup button {
+      font-size: 13px;
+      margin-left: 10%;
+      width: 80%;
+    }
+
+    #thanks-popup {
+      top: -250px;
+      width: 220px;
+    }
+
+    #thanks-popup button {
+      font-size: 13px;
+      margin-left: 10%;
+      width: 80%;
+    }
+  
+    /* contact us section */
+  
+    .us .contact-us {
+      flex: 40%;
+    }
+  
+     .address abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .mail abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone img {
+      margin-top: 5px;
+    }
+  
+    /* connect from us section */
+  
+    .connect p {
+      color: white;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .connect .icons {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .connect img {
+      height: auto;
+      width: 25px;
+      
+    }
+  
+    /* download our app section */
+  
+    .download .appstore img {
+      border-radius: 5px;
+      height: 38px;
+      margin-right: 10px;
+      margin-top: 7px;
+      width: 120px;
+    }
+  
+    .download .playstore {
+      margin-top: 0px;
+    }
+  
+    .download .playstore img {
+      border-radius: 4px;
+      height: 46px;
+      width: 125px;
+    }
+  
+    .copyright {
+      font-size: 10px;
+    }
+  }
+
+  /* for desktop */
+  
+  @media (min-width: 601px) {
+
+    /* footer header section */
+    
+    .footer-header img {
+      height: 30px;
+      margin: 12px 3px 0px 0px;
+      width: 30px;
+    }
+  
+    .footer-header .ambu-footer-quote h3 {
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+  
+    /* contact us section */
+  
+    .us {
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0px 5px;
+    }
+  
+    .us a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  
+    .us p {
+      font-size: 1em;
+    }
+  
+    .us p a:hover {
+      box-shadow: -1px 2px 1px black;
+      scale: 2;
+      transition: 0.4s;
+    }
+  
+    .us .know-us {
+      flex: 35%;
+    }
+  
+    .us h2 {
+      font-size: 1.2em;
+    }
+  
+    .us img {
+      height: 20px;
+      margin-right: 5px;
+      width: 20px;
+    }
+  
+    .us .services {
+      flex: 35%;
+    }
+  
+    .us .contact-us {
+      flex: 35%;
+    }
+
+    .address abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .mail abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone img {
+      margin-top: 5px;
+    }
+  
+    /* connect us section */
+    
+    .connect p {
+      color: white;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      margin: 10px 0px;
+      text-align: center;
+    }
+  
+    .connect .icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  
+  
+    .connect img {
+      height: auto;
+      width: 30px;
+    }
+  
+    .connect .first-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .second-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .third-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .fourth-icon {
+      margin: 0px 40px;
+    }
+
+    /* download section */
+  
+    .download .appstore img {
+      border-radius: 5px;
+      height: 38px;
+      margin-right: 10px;
+      margin-top: 7px;
+      width: 120px;
+    }
+  
+    .download .playstore {
+      margin-top: 0px;
+    }
+  
+    .download .playstore img {
+      border-radius: 4px;
+      height: 46px;
+      width: 125px;
+    }
+  
+    /* copyright section */
+
+    .copyright {
+      font-size: 15px;
+    }
+  }
+
+        /* media query for other section for mobile */
+
+  @media (max-width: 800px){
+
+/* media query for the company */
+
+    .company h1,p {
+      z-index: 2;
+    }
+
+    .company h1 {
+      font-size: 250%;
+      top: 25%;
+    }
+
+    .company p {
+      background-color: rgba(7, 7, 7, 0.4);
+      color: #fff;
+    }
+
+    .company img {
+      opacity: 0.8;
+      margin-top: 17%;
+    }
+
+    /* media query for the feature section */
+
+    #feature h1 {
+      font-size: 20px;
+      padding-bottom: 50px;
+    }
+
+    /* media query for the about us section */
+
+    .about h1 {
+      font-size: 35px;
+    }
+    .about p{
+      margin: 0;
+      width: 100%;
+    }
+
+    .about .about-text {
+      font-size: 17px;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 10px;
+      right:0;
+      width:100%;
+    }
+
+    /* media queries for who we are */
+
+    .about-we .about-we-text {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    
+    .choose-us .choose-img {
+      display: block;
+
+    }
+
+    .choose-us .img-two p {
+      text-align: center;
+      width: 100%;
+    }
+
+    /* media query for meet us */
+
+    .meet-us h2 {
+      font-size: 20px;
+    }
+
+    .meet-us p {
+      font-size: 12px;
+    }
+
+    /* media query for our partners */
+
+    .our-partners h1 {
+      font-size: 30px;
+    }
+
+    .our-partners .partners-logo .logo-one {
+      height: 100px;
+      margin-top: 50px;
+      width: 100px;
+    }
+  }
