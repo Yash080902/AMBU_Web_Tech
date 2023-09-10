@@ -12,6 +12,7 @@
 }
 
 /* predefineing the colors for our webpages */
+
 :root {
   --bg-color: #fff;
   --main-color: #29fd53;
@@ -53,9 +54,13 @@ body::-webkit-scrollbar {
     text-align: center;
   }
 
+  /* Us section like (know us, services, contact with us, contact us section) */
+
   .us {
     font-family: inter;
   }
+
+  /* contact with us section */
 
   .us .contact-with-us {
     font-size: 15px;
