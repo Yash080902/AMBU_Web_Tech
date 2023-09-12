@@ -70,8 +70,8 @@ body::-webkit-scrollbar {
   }
 
   .us .contact-with-us button {
-    background: linear-gradient(90deg, rgba(211,78,227,1) 0%, rgba(4,51,158,1) 100%, rgba(0,223,255,1) 100%);
     background: rgb(211,78,227);
+    background: linear-gradient(90deg, rgba(211,78,227,1) 0%, rgba(4,51,158,1) 100%, rgba(0,223,255,1) 100%);
     border-radius: 20px;
     border: none;
     color: #fff;
@@ -241,7 +241,7 @@ body::-webkit-scrollbar {
   
     .us p a:hover {
       box-shadow: 1px 1px  black;
-      font-size: 20px;
+      scale: 1.1;
       transition: 0.4s;
     }
   
@@ -423,7 +423,7 @@ body::-webkit-scrollbar {
   
     .us p a:hover {
       box-shadow: -1px 2px 1px black;
-      scale: 2;
+      scale: 1.2;
       transition: 0.4s;
     }
   
