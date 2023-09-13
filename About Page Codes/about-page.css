@@ -190,26 +190,12 @@ header {
 
 /* company's feature m*/
 
-.wrapper {
-  margin: 5px 0 60px 0;
+.main_heading {
   display: grid;
   place-items: center;
-}
-
-.typing-demo {
-  width: 25ch;
-  animation: typing 3s steps(20) infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: Kaisei Decol;
-  font-size: 30px;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
+  font-family: 'Kaisei Decol', serif;
+  font-size: 45px;
+  margin-bottom: 45px;
 }
 
 /* about us section */
@@ -1030,8 +1016,9 @@ header {
 
     /* media query for the feature section */
 
-    .typing-demo {
-      font-size: 23px;
+    .main_heading {
+      font-size: 25px;
+      margin-bottom: 30px;
     }
 
     /* media query for the about us section */
