@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- added meta descripion for about page that contain more description about this page-->
+
+  <meta name="description" content="About Page: Learn about Ambuvians, our mission and vision.Dedicated to a faster, more reliable, and cost-effective healthcare service. Offering 24/7 support, our goal is to prioritize your well-being.
+  ">
+
+  <title>About Page</title>
+
+  <!-- link for an external css -->
+
+  <link rel="stylesheet" href="about-page.css">
+
+  <!-- links for fonts from remix icon and boxicons -->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!-- links for fonts from fontawesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- external links for the coroserl image effects -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    
+</head>
+<body>
+
+  <!-- nav bar section -->
+
+  <header>
+
+    <div id="navbar">
+
+      <!-- left side of header that contain Logo -->
+      <div id="logo">
+        <a href="#">
+          <!-- <img src="about-page-images/ambu-logo.webp" alt="ambuvians Logo" > -->
+          <picture id="logo1">
+            <source srcset="about-page-images/ambu-logo.webp" type="image/webp">
+            <source srcset="about-page-images/ambu-logo.png" type="image/jpeg"> 
+            <img src="about-page-images/ambu-logo.png" id="logo1">
+          </picture>
+        </a>
+      </div>
+
+      <!-- right side header that contain home, about, services and profile pic options -->
+      <div class="right-header">
+
+        <div class="laptop-links">
+          <ul class="links right-header-element">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <!-- Use this style to the link according to page
+              
+              style="padding: 5px;
+            background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+              background-repeat: no-repeat;
+              background-size: 50% 4px;
+              background-position: bottom;" -->
+          </ul>
+        </div>
+
+        <div style=" display: flex; gap: 1vw; justify-content: center; align-items: center;">
+          <!-- language changing option -->
+
+          <div class="right-header-element language">
+            <select name="language" id="language">
+              <option value="default-language" selected disabled hidden>Language</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+
+            </select>
+          </div>
+
+          <!-- profile pic -->
+          <div class="right-header-element">
+            <abbr title="Pic">
+              <picture>
+                <source srcset="img.webp" type="image/webp">
+                <source srcset="img.jpg" type="image/jpeg"> 
+                <img src="img.jpg">
+              </picture>
+            </abbr>
+          </div>
+
+          <!-- ham menu  -->
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- div for ham menu -->
+    <div class="dropdown_menu">
+      <div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </header>
+
+
+  <!-- Company image and text -->
+
+    <!-- home section start -->
+    <section class="home company" id="home">
+      <h1>AMBUvians</h1>
+      
+    </section>
+    
+    <p class="company-quote">India’s 1st One-Stop and Advanced Healthcare Services </p>
+  <!-- feature -->
+
+  <p class="main_heading"></p>
+
+  <!-- about us -->
+
+  <div class="about">
+    <div class="about-text">
+      <h1>About</h1>
+
+      <!-- text that contains about company's goals and motive -->
+      <p>Our mission is to provide exceptional medical care, innovative solutions, and personalized attention to 
+        enhance the health and well-being of our community.</p>
+    </div>
+      <!-- <img src="about-page-images/about-us.webp" alt="image that contains about us"> -->
+      <picture>
+        <source srcset="about-page-images/about-us.webp" type="image/webp">
+        <source srcset="about-page-images/about-us.jpg" type="image/jpeg"> 
+        <img src="about-page-images/about-us.jpg">
+      </picture>
+  </div>
+
+  <!-- random quotes section -->
+
+  <div class="quotes">
+
+    <!-- randomly generated quotes  -->
+    <p>Your health journey, our priority - that's the Ambuvians way</p>    
+  </div>
+
+  <!-- about we -->
+
+  <div class="about-we">
+
+    <div class="about-we-text">
+      <h2>Who We Are</h2>
+
+      <!-- about our team and company -->
+      <p class="who-we-are-text">
+      </p>
+    </div>
+
+  </div>
+
+  <!-- why choose us section -->
+
+  <div class="choose-us">
+
+    <div class="choose-text">
+      <h2>Why Choose us?</h2>
+
+      <!-- why choose us images and text -->
+        <div class="choose-img">
+
+          <!-- image one -->
+          <div class="img-one">
+            <img src="about-page-images/img-one.webp" alt="first image of choose image that contains patient first policy">
+            <p>Patient first policy</p>
+          </div>
+
+          <!-- image two -->
+          <div class="img-two">
+            <img src="about-page-images/img-two.webp" alt="ksecond image of choose us image that contains Emergency assistance time of 15 minutes or less">
+            <p>Emergency assistance time of 15 minutes or less</p>
+          </div>
+
+          <!-- image three -->
+          <div class="img-three">
+            <img src="about-page-images/img-three.webp" alt="third image of the choose us image that contains 24/7 support">
+            <p>24/7 Support</p>
+          </div>
+
+          <!-- image four -->
+          <div class="img-four">
+            <img src="about-page-images/img-four.webp" alt="fourth image of the choose us image that contains customize and Reliable">
+            <p>Customize and Reliable </p>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  <!-- meet out teams section -->
+  <div class="choose-text">
+    <h1 style="text-align: center;" class="animate-char">Meet Our Teams</h1>
+  <div class="try">
+<main>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--one">
+          <div>
+
+            <!-- our teams images and the links -->
+
+            <a href="#" target="_blank">Yash Kumar Goel</a>
+                <a href="" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide--two">
+          <div>
+            <a href="#" target="_blank">Yash Kumar Goel</a>
+            <a href="#" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--three">
+  
+          <div>
+            <a href="#" target="_blank">Yash Kumar Goel</a>
+            <a href="#" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--four">
+  
+          <div>
+            <a href="#" target="_blank">Yash Kumar Goel</a>
+            <a href="#" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--five">
+  
+          <div>
+            <a href="#" target="_blank">Yash Kumar Goel</a>
+            <a href="#" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div></div>
+  </main></div>
+
+
+   <!-- Footer Section -->
+
+  <div class="footer">
+
+    <!-- Footer Main Header Section -->
+    <div class="footer-header">
+      <div class="footer-img">
+
+        <!-- main footer header image of india-->
+        <img src="about-page-images/india.webp" alt="image of india" />
+      </div>
+
+      <!-- footer quote -->
+      <div class="ambu-footer-quote">
+
+        <!-- foooter header quote  -->
+        <h3>India's First Unified Health Care Software</h3>
+      </div>
+    </div>
+
+    <!-- Reach Us section -->
+
+    <div class="us">
+
+      <div class="know-us">
+
+        <!-- know us section that contains our general links -->
+        <h2>Know Us</h2>
+        <p><a href="#">HOME</a></p>
+        <p><a href="#">Profile</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Services</a></p>
+      </div>
+
+      <div class="services">
+
+        <!-- services section which are provided by our company -->
+        <h2>Services</h2>
+        <p><a href="#">ALS Ambulance</a></p>
+        <p><a href="#">BLS Ambulance</a></p>
+        <p><a href="#">PTS Ambulance</a></p>
+        <p><a href="#">Mortality Ambulance</a></p>
+      </div>
+
+      <div class="contact-with-us">
+
+        <!-- contact with us section which provide user to contact with us -->
+        <h2>
+          Contact with us
+        </h2>
+
+        <!-- contact us button -->
+        <button type="button"  onclick="contactButton()">Contact Us</button>
+
+        <!-- query form popup -->
+          <div id="contact-us-popup">
+            <h2>Query Form</h2>
+            <img onclick="backfunc()" src="about-page-images/back-img.webp" alt="back image to back the content pop-up">
+          
+            <!-- popup form where user fill their query -->
+            <form action="" method="get">
+                <input type="text" name="" id="" placeholder="Enter Name">
+                <input type="text" name="" id="" placeholder="Enter Email/Phone No."><br>
+                <select name="content" id="query-content">
+                  <option value="a">ambulance</option>
+                  <option value="b">medicines</option>
+                  <option value="c">services</option>
+                </select><br>
+                <input type="text" name="" id="" placeholder="Descrption in detail">
+                <button type="button" onclick="submitfunc()">Submit</button>
+            </form>
+         </div>
+
+         <!-- thanks popup after submittin user's query -->
+         <div id="thanks-popup">
+                <img src="about-page-images/thanks-img.webp" alt="image of the thanks pop-up">
+                <h1>Thanks For Contacting Us</h1>
+                <p>Our team get back to you shortly</p>
+                <button type="button" onclick="browsefunc()">Stay tuned</button>
+        </div>
+      </div>
+
+      <div class="contact-us">
+
+        <h2>Contact Us</h2>
+
+        <!-- our main branch address -->
+          <div class="address">
+            <abbr title="Company address">
+            <img src="about-page-images/google-maps.webp" alt="google map icon" />
+            <p><a href="geo:28.752470765577947, 77.49913956776183" target="_blank" class="add">4th Floor TBI KIET Group of Institutions Ghaziabad Delhi NCR 201206</a></p>
+            </abbr>
+          </div>
+
+          <!-- our contact mail -->
+          <div class="mail">
+            <abbr title="Comapany email-Id">
+              <img src="about-page-images/gmail.webp" alt="gmail icon"/>
+              <p><a href="mailto:official.ambuvians@gmail.com">official.ambuvians@gmail.com</a></p>
+            </abbr> 
+          </div>
+
+          <!-- our telephone number -->
+          <div class="phone">
+            <abbr title="Company contact number">
+            <img src="about-page-images/telephone.webp" alt="telephone icon"/>
+              <section>
+                <p><a href="tel:+7505853812">7505853812</a></p>
+                <p><a href="tel:+8630729931">8630729931</a></p>
+              </section>
+            </abbr>
+          </div>
+
+      </div>
+
+    </div>
+
+    <!-- Connect Us Section -->
+
+    <div class="connect">
+
+      <p>Connect With Us</p>
+
+      <div class="icons">
+
+          <!-- our instagram handle -->
+        <abbr title="instagram" class="first-icon">
+          <a href="https://www.instagram.com/official.ambuvians/"  target="_blank"><img src="about-page-images/instagram.webp" alt="instagram icon" /></a>
+        </abbr>
+
+          <!-- our whatsapp handle-->
+        <abbr title="whatsapp"  class="second-icon">
+          <a href="https://wa.me/+7505853812" target="_blank"><img src="about-page-images/whatsapp.webp" alt="whatsapp icon" /></a>
+        </abbr>
+
+          <!-- our twitter handle -->
+        <abbr title="twitter" class="third-icon">
+          <a href="#"><img src="about-page-images/twitter.webp" alt="twitter icon" /></a>
+        </abbr>
+
+          <!-- our linkedin handle -->
+        <abbr title="linkedin" class="fourth-icon">
+          <a href="https://www.linkedin.com/company/ambuvians-healthcare-pvt-ltd/?viewAsMember=true" target="_blank">
+            <picture>
+              <source srcset="about-page-images/linkedin.webp" type="image/webp">
+              <source srcset="about-page-images/linkedin.png" type="image/jpeg"> 
+              <img src="about-page-images/linkedin.png">
+            </picture>
+          </a>
+        </abbr>
+
+      </div>
+    </div>
+
+    <!-- Download section -->
+
+    <div class="download">
+
+        <!-- download our app from appstore -->
+      <div class="appstore">
+        <abbr title="app-store">
+            <img src="about-page-images/app-store.jpg" alt="app-store image"/>
+        </abbr>
+      </div>
+
+        <!-- download our app from playstore -->
+      <div class="playstore">
+        <abbr title="play-store">
+            <img src="about-page-images/play-store.webp" alt="play-store image"/>
+        </abbr>
+      </div>
+
+    </div>
+
+    <!-- Copyright Section -->
+
+    <div class="copyright">
+      <p>copyright @2023 AMBU Organisation</p>
+    </div>
+    
+  </div>
+
+  <!-- external link for the javascript -->
+
+  <script src="about-page.js"></script>
+
+
+</body>
+</html>
