@@ -414,7 +414,13 @@
 
           <!-- our linkedin handle -->
         <abbr title="linkedin" class="fourth-icon">
-          <a href="https://www.linkedin.com/company/ambuvians-healthcare-pvt-ltd/?viewAsMember=true" target="_blank"><img src="about-page-images/linkedin.webp" alt="linkedin icon" /></a>
+          <a href="https://www.linkedin.com/company/ambuvians-healthcare-pvt-ltd/?viewAsMember=true" target="_blank">
+            <picture>
+              <source srcset="about-page-images/linkedin.webp" type="image/webp">
+              <source srcset="about-page-images/linkedin.png" type="image/png"> 
+              <img src="about-page-images/linkedin.png" alt="linkedin icon">
+            </picture>
+          </a>
         </abbr>
 
       </div>
@@ -457,28 +463,6 @@
 
   <!-- external scripting for our webpage -->
 <script src="about-page.js"></script>
-
-
-  <!-- internal scripting for image corosel -->
-  <script>
-    $('.owl-carousel').owlCarousel({
-  loop:false,
-  center: true,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:2
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:5
-      }
-  }
-  })
-  </script>
 
 
 </body>
