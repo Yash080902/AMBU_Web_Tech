@@ -12,7 +12,7 @@ function scrollFunction() {
   } else {
       document.getElementById("navbar").style.height = "5vw";
       document.getElementById("logo1").style.height = "4.5vw";
-  }
+  }s
 }
 
 // to make ham menu responsive
@@ -61,11 +61,11 @@ const typeWriternew = () => {
 
 typeWriternew();
 
-// meet or team swipper slides
+           // meet or team swipper slides
                         
-var swiper = new Swiper(".swiper", {
-  effect: "coverflow",
-  grabCursor: true,
+ var swiper = new Swiper(".swiper", {
+effect: "coverflow",
+grabCursor: true,
   centeredSlides: true,
   coverflowEffect: {
     rotate: 0,
@@ -99,31 +99,79 @@ var swiper = new Swiper(".swiper", {
       slidesPerView: 3
     }
   }
-});  
+});    
 
-// javascript for contact with us button
+// random quotes generator
 
-function contactButton() {
-  document.getElementById("contact-us-popup").style.display = "block";
+// Array of quotes
+const quotes = [
+  { author: "Your health, our commitment." },
+  { author: "Healthy citizens are the greatest asset any country can have." },
+  { author: "Every single journey of your life starts with a healthy mind and a healthy journey." },
+  { author: "Healthcare is not a job; it's a noble mission to save lives and improve well-being." },
+  { author: "Healthcare is the heart of our community, and we're here to keep your heart healthy." },
+  { author: "Every patient is a story waiting to be told, and we're here to help write the happiest chapter" },
+  { author: "Your health is our priority, your well-being is our mission." },
+  { author: "In the world of healthcare, every small act of kindness makes a big difference."},
+  { author: "Together, we're building a healthier, happier tomorrow" }
 
+  // Add more quotes as needed
+];
+
+// Function to generate a random quote
+function generateQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const quote = quotes[randomIndex];
+  // document.getElementById("quote-text").textContent = quote.text;
+  document.getElementById("quote-text").textContent = `- ${quote.author}`;
 }
 
-// javascript for closing contact with us popup
+// Automatically generate new quotes every 10 seconds
+setInterval(generateQuote, 2000);
 
-function backfunc() {
-  document.getElementById("contact-us-popup").style.display  = "none";
-}
+// Generate initial quote
+generateQuote();
 
-// javascript for opening thanks popup after submittion of query
+// footer section javascript codes
 
-function submitfunc() {
-  document.getElementById("contact-us-popup").style.display = "none";
+document.querySelector(".contact-us-form").addEventListener("click", () => {
+  document.querySelector(".form").style.display = "block";
+  document.querySelector(".contact-us-form").style.display = "none";
+});
 
-  document.getElementById("thanks-popup").style.display = "block";
-}
+document.querySelector(".submit").addEventListener("click", () => {
+  document
+      .querySelectorAll(".form-input")
+      .forEach((input) => (input.value = ""));
 
-// javascript for closing thanks popup
+  document.querySelector(".form").innerHTML = `
+  <div class="form-item" data-animation="fadeOff">
+    <div>
+      <figure><img src="about-page-images/thanks-img.webp" alt="ambu logo" class="form-logo"></figure>
+    </div>
 
-function browsefunc() {
-  document.getElementById("thanks-popup").style.display = "none";
-}   
+    <div>
+      <h1>Thank You</h1>
+    </div>
+
+    <div>
+      <p class="form-para-1">Our team will get back
+        to you shortly !
+      </p>
+    </div>
+
+
+
+    <p class="form-para-2">Stay Tuned</p>
+
+  </div>`;
+  // document.querySelector(".form-dropdown").option.value = "Select";
+
+  document.querySelector(".form").classList.add("fade1");
+  document.querySelector(".form").classList.add("fadeOff");
+  document.querySelector(".contact-us-form").style.display = "block";
+
+  setInterval(() => {
+      document.querySelector(".form").style.display = "none";
+  }, 8000);
+});
