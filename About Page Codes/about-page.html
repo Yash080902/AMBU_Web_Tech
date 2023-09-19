@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- added meta descripion for about page that contain more description about this page-->
+
+  <meta name="description" content="About Page: Learn about Ambuvians, our mission and vision.Dedicated to a faster, more reliable, and cost-effective healthcare service. Offering 24/7 support, our goal is to prioritize your well-being.
+  ">
+
+  <!-- meta tag for the keywords -->
+
+  <meta name="keywords" content="Healthcare, Ambulances, Ambuvians" />
+
+  <title>About Page</title>
+
+  <!-- link for an external css -->
+
+  <link rel="stylesheet" href="about-page.css">
+
+  <!-- links for fonts from remix icon and boxicons -->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!-- links for fonts from fontawesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- external links for the coroserl image effects -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+
+  <!-- nav bar section -->
+
+  <header>
+
+    <div id="navbar">
+
+      <!-- left side of header that contain Logo -->
+      <div id="logo">
+        <a href="#">
+          <!-- <img src="about-page-images/ambu-logo.webp" alt="ambuvians Logo" > -->
+          <picture id="logo1">
+            <source srcset="about-page-images/ambu-logo.webp" type="image/webp">
+            <source srcset="about-page-images/ambu-logo.png" type="image/jpeg"> 
+            <img src="about-page-images/ambu-logo.png" id="logo1">
+          </picture>
+        </a>
+      </div>
+
+      <!-- right side header that contain home, about, services and profile pic options -->
+      <div class="right-header">
+
+        <div class="laptop-links">
+          <ul class="links right-header-element">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#" style="padding: 5px;
+              background: linear-gradient(90deg, #0092ee 0%, #0c65ba 50%, #203381 100%);
+                background-repeat: no-repeat;
+                background-size: 50% 4px;
+                background-position: bottom;">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+
+          </ul>
+        </div>
+
+        <div style=" display: flex; gap: 1vw; justify-content: center; align-items: center;">
+          <!-- language changing option -->
+
+          <div class="right-header-element language">
+            <select name="language" id="language">
+              <option value="default-language" selected disabled hidden>Language</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+
+            </select>
+          </div>
+
+          <!-- profile pic -->
+          <div class="right-header-element">
+            <abbr title="Pic">
+              <picture>
+                <source srcset="img.webp" type="image/webp">
+                <source srcset="img.jpg" type="image/jpeg"> 
+                <i class="fa-solid fa-user fa-xl"></i>
+              </picture>
+            </abbr>
+          </div>
+
+          <!-- ham menu  -->
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- div for ham menu -->
+    <div class="dropdown_menu">
+      <div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </header>
+
+
+  <!-- Company image and text -->
+
+    <!-- home section start -->
+    <section class="home company" id="home">
+      <h1>AMBUvians</h1>
+      
+    </section>
+    
+    <p class="company-quote">India’s 1st One-Stop and Advanced Healthcare Services </p>
+  <!-- feature -->
+
+  <p class="main_heading"></p>
+
+  <!-- about us -->
+
+  <div class="about">
+    <div class="about-text">
+      <h1>About Us</h1>
+
+      <!-- text that contains about company's goals and motive -->
+      <p>At Ambuvians, we are committed to revolutionizing the way healthcare organizations operate and deliver patient care. With a deep understanding of the complex challenges facing the healthcare industry, we have developed a state-of-the-art Healthcare and Management System that empowers healthcare providers to optimize their operations, enhance patient experiences, and ultimately, save lives.</p>
+    </div>
+
+      <picture>
+        <source srcset="about-page-images/about-us.webp" type="image/webp">
+        <source srcset="about-page-images/about-us.jpg" type="image/jpeg"> 
+        <img src="about-page-images/about-us.jpg">
+      </picture>
+  </div>
+
+  <!-- random quotes section -->
+
+  <div class="quotes">
+
+    <!-- randomly generated quotes  -->
+    <p id="quote-text">Your health journey, our priority - that's the Ambuvians way</p>    
+  </div>
+
+  <!-- about we -->
+
+  <div class="about-we">
+
+    <div class="about-we-text">
+      <h2>Who We Are</h2>
+
+      <!-- about our team and company -->
+      <p class="who-we-are-text">
+      </p>
+    </div>
+
+  </div>
+
+  <!-- why choose us section -->
+
+  <div class="choose-us">
+
+    <div class="choose-text">
+      <h2>Why Choose us?</h2>
+
+      <!-- why choose us images and text -->
+        <div class="choose-img">
+
+          <!-- image one -->
+          <div class="img-one">
+            <img class="scale" src="about-page-images/img-one.webp" alt="first image of choose image that contains patient first policy">
+            <p>Patient first policy</p>
+          </div>
+
+          <!-- image two -->
+          <div class="img-two">
+            <img class="scale" src="about-page-images/img-two.webp" alt="ksecond image of choose us image that contains Emergency assistance time of 15 minutes or less">
+            <p>Emergency assistance time of 15 minutes or less</p>
+          </div>
+
+          <!-- image three -->
+          <div class="img-three">
+            <img class="scale" src="about-page-images/img-three.webp" alt="third image of the choose us image that contains 24/7 support">
+            <p>24/7 Support</p>
+          </div>
+
+          <!-- image four -->
+          <div class="img-four">
+            <img class="scale" src="about-page-images/img-four.webp" alt="fourth image of the choose us image that contains customize and Reliable">
+            <p>Customize and Reliable </p>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  <!-- meet out teams section -->
+  <div class="choose-text">
+    <h1 style="text-align: center;" class="animate-char">Meet Our Team</h1>
+  <div class="try">
+<main>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--one">
+          <div>
+            <a href="" target="_blank">Dr.Rahat Ullah Khan</a>
+                <a href="" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide--two">
+          <div>
+            <a href="" target="_blank">Yash Kumar Goel</a>
+            <a href="https://www.instagram.com/goel4615/" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yash-kumar-goel-b60ba2221/" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--three">
+  
+          <div>
+            <a href="" target="_blank">Suryansh</a>
+            <a href="" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/suryansh_gupta_13?igshid=MzRlODBiNWFlZA==" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--four">
+  
+          <div>
+            <a href="" target="_blank">Vidushi Singhal</a>
+            <a href="https://www.linkedin.com/in/vidushi-singhal-ba3980226/" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/its_vidsinghal_/" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <div class="swiper-slide swiper-slide--five">
+  
+          <div>
+            <a href="" target="_blank">Yash Kumar Goel</a>
+            <a href="" target="blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div></div>
+  </main></div>
+
+
+   <!-- Footer Section -->
+
+   <div class="footer box">
+
+    <!-- heading in the footer -->
+
+    <div style="font-size: 1.5vw; margin: 1vw; align-items: center;" class="footer-title">
+      <img src="about-page-images/india.webp" alt="India map" style="width:4vw">
+      <h1>&nbsp; India's First Unified Health Care
+        Software</h1>
+    </div>
+
+    <!-- options inside footer - Know-us, services, connect, contact-us -->
+
+    <div class="footer-options">
+
+      <!-- know us footer  -->
+
+      <div class="know-us">
+        <h2>
+          <abbr title="Know US">
+            Know US
+          </abbr>
+        </h2>
+        <ul>
+          <li><a href="#"><abbr title="Home">Home</abbr></a> </li>
+          <li><a href="#"><abbr title="Profile">Profile</abbr></a></li>
+          <li><a href="#"><abbr title="About us">About us</abbr></a></li>
+          <li><a href="#"><abbr title="Services">Services</abbr></a></li>
+        </ul>
+      </div>
+
+      <!-- services footer  -->
+
+      <div class="services">
+        <h2>
+          <abbr title="Services">
+            Services
+          </abbr>
+        </h2>
+        <ul>
+
+          <li><a href="#"><abbr title="BLS Ambulance">BLS Ambulance</abbr></a></li>
+          <li><a href="#"><abbr title="PLS Ambulance">PLS Ambulance</abbr></a></li>
+          <li><a href="#"><abbr title="Mortality Ambulance">Mortality Ambulance</abbr></a></li>
+          <li><a href="#"><abbr title="ALS Ambulance">ALS Ambulance</abbr></a></li>
+
+        </ul>
+      </div>
+
+      <!-- connect footer  -->
+
+      <div class="connect">
+        <h2>
+          <abbr title="Connect With Us">
+            Connect With Us
+          </abbr>
+        </h2>
+
+        <div class="contact-us-form">Contact Us</div>
+      </div>
+
+      <!-- connect us footer  -->
+
+      <div class="contact-us">
+        <h2>
+          <abbr title="Contact Us">
+            Contact Us
+          </abbr>
+        </h2>
+        <ul style="max-width: 400px;">
+
+          <li style="display: flex; align-items: center;">
+            <div> <abbr title="Location"><img src="about-page-images/google-maps.webp" alt=""
+                  style="width:3.5vw; margin-right: 1.5vw;"> </abbr></div>
+            <div style="font-size: 1.2vw;"> <a href="https://goo.gl/maps/Y2Eoynbw8ZAyd8NJ6"><abbr
+                  title="4th Floor TBI,KIET Group of Institutions Ghaziabad Delhi NCR ">4th Floor TBI,
+                  KIET Group of Institutions <br>Ghaziabad Delhi NCR <br>201206</abbr></a></div>
+          </li>
+
+          <li style="display: flex; align-items: center;">
+            <div><abbr title="Mail"><img src="about-page-images/gmail.webp" alt="AMBU mail" style="width:3.5vw; margin-right: 1.5vw;">
+              </abbr></div>
+            <div style="font-size: 1.2vw;"><a href="mailto:official.ambuvians@gmail.com"> <abbr
+                  title="official.ambuvians@gmail.com">official.ambuvians@gmail.com</abbr> </a>
+                  <a href="mailto:official.no-reply@ambuvians.in"> <abbr
+                    title="no-reply@ambuvians.in">official.ambuvians@gmail.in</abbr> </a> </div>
+          </li>
+
+          <li style="display: flex; align-items: center; margin-bottom: 1vw;">
+            <div><abbr title="Phone No."><img src="about-page-images/telephone.webp" alt=""
+                  style="width:3.5vw; margin-right: 1.5vw;"> </abbr></div>
+            <div style="font-size: 1.2vw;">
+              <a href=" tel:+917505853812"> <abbr title="7505853812">7505853812<br></abbr> </a>
+              <a href="tel:+918630729931"> <abbr title="8630729931">8630729931</abbr> </a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- social Media footer -->
+
+    <!-- Connect Us Section -->
+
+    <div class="connect">
+
+      <p>Connect With Us</p>
+
+      <div class="icons">
+
+        <!-- our instagram handle -->
+        <abbr title="instagram" class="first-icon">
+          <a href="https://www.instagram.com/official.ambuvians/" target="_blank"><img
+              src="about-page-images/instagram.webp" alt="" /></a>
+        </abbr>
+
+        <!-- our whatsapp handle-->
+        <abbr title="whatsapp" class="second-icon">
+          <a href="https://wa.me/+7505853812" target="_blank"><img src="about-page-images/whatsapp.webp" alt="" /></a>
+        </abbr>
+
+        <!-- our twitter handle -->
+        <abbr title="threads" class="third-icon">
+          <a href="#"><i class="fa-brands fa-threads fa-2xl"></i></a>
+        </abbr>
+
+        <!-- our linkedin handle -->
+        <abbr title="linkedin" class="fourth-icon">
+          <a href="https://www.linkedin.com/company/ambuvians-healthcare-pvt-ltd/?viewAsMember=true"
+            target="_blank"><img src="about-page-images/linkedin.webp" alt="" /></a>
+        </abbr>
+
+      </div>
+    </div>
+
+    <!-- Download section -->
+
+    <div class="download">
+
+      <!-- download our app from appstore -->
+      <div class="appstore">
+        <abbr title="app-store">
+          <img src="about-page-images/play-store.webp" alt="" />
+        </abbr>
+      </div>
+
+      <!-- download our app from playstore -->
+      <div class="playstore">
+        <abbr title="play-store">
+          <img src="about-page-images/app-store.webp" alt="" />
+        </abbr>
+      </div>
+
+    </div>
+
+
+    <!-- copyright -->
+
+    <div>
+      <p style="margin-left: 1vw;" class="copy"> <a href="#" style="color: white;"><abbr title="Click to Know More">
+            copyright@2023 AMBUvians organization </abbr></a> </p>
+    </div>
+
+  </div>
+
+  <div class="form" style="display: none;" data-animation="fade">
+
+    <h1>Query Form</h1><br>
+    <div class="form-item">
+      <input type="text" placeholder="Enter Name" class="form-input">
+      <input type="text" placeholder="Enter Email-id/Phone No" class="form-input">
+      <select name="Select" class="form-dropdown">
+        <option value="none" selected disabled hidden>Select</option>
+        <option value="ambulance-services">Ambulance Services</option>
+        <option value="data-security">Data Security</option>
+        <option value="address-updates">Address Updates</option>
+        <option value="know-more">Know More</option>
+        <option value="others">Others</option>
+      </select>
+      <input type="text" placeholder="Description" class="form-input">
+      <button class="submit">Submit</button>
+
+
+
+
+    </div>
+  </div>
+  <!-- external link for the javascript -->
+
+  <script src="about-page.js"></script>
+
+
+</body>
+</html>
