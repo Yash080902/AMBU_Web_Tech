@@ -1,0 +1,252 @@
+  /* Deafult page styling */
+  
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  body{
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Header section  */
+  /* AMBU LOGO */
+.header img{
+    position: absolute;
+    top: 13px;
+    left: 0px;
+    z-index: 1; 
+    
+    flex: 1;
+  height: 15%;
+  width:20%;
+}
+/* Welcome to AMBUvians */
+.text-1{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: "Inter";
+    font-size: 4.1vw;
+    font-weight: bold;
+    font-family: "Kaisei Decol", Calibri, serif;
+    position: absolute;
+    left:30%;
+    top:13px;
+}
+h2{
+    color:blue;
+    font-family: inknut antiqua;
+    
+}
+/* Let's hope you stay on top of your health */
+.text-2{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: "Inter";
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Kaisei Decol", Calibri, serif;
+    position: absolute;
+    left:49%;
+    top:14%;
+}
+/* Main body section */
+
+/* Left-Side img */
+.content img{
+position: absolute;
+width: 45%;
+height: 70%;
+left: 0px;
+top: 13%;
+}
+
+/* Input Fields */
+input[type="email"]{
+box-sizing: border-box;
+padding-left: 8px;
+position: absolute;
+width: 45vw;
+height: 50px;
+left: 50%;
+top: 30%;
+font-size: 1.3rem;
+background: #FFFFFF;
+border: 1px solid #0A66C2;
+border-radius: 10px;
+cursor:pointer;
+}
+
+input[type="password"]{
+
+    box-sizing: border-box;
+    padding-left: 8px;
+    position: absolute;
+    width: 45vw;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    font-size: 1.3rem;
+    background: #FFFFFF;
+    border: 1px solid #0A66C2;
+    border-radius: 10px;
+    cursor:pointer
+    }
+ /* Input field text */
+.txt-1{
+position: absolute;
+width:90%;
+left: 50%;
+top: 25%;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 1.1rem;
+margin-bottom:2px ;
+color: rgba(0, 0, 0, 0.9);
+}
+
+.txt-2{
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* CheckBox */
+.check{
+position: absolute;
+width: 45vw;
+height: 40px;
+left: 50%;
+top: 59%;
+font-family: 'Inter';
+font-style: normal;
+font-size: 1rem;
+cursor: pointer;
+color: rgba(0, 0, 0, 0.9);
+}
+
+/* Login Button */
+.login{
+    box-sizing: border-box;
+     text-align: center;
+     align-items: center;
+    position: absolute;
+    width: 45vw;
+    height: 50px;
+    left: 50%;
+    top: 66%;
+    cursor: pointer;
+    color: white;
+    background-color: #0A66C2;
+    background:#0A66C2;
+    border: 1px solid #0A66C2;
+    border-radius: 10px;
+}
+
+.login button{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    background-color: transparent; 
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Forget password */
+.forget{
+    box-sizing: border-box;
+    position: absolute;
+    left: 83%;
+    top: 75%;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.forget a{
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* --OR-- */
+.or{
+position: absolute;
+width: 79px;
+height: 40px;
+left: 68%;
+top: 80%;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1.1rem;
+line-height: 29px;
+color: rgba(0, 0, 0, 0.9);
+}
+
+/* Google  */
+.search{
+position: absolute;
+width: 20px;
+height: 20px;
+left: 65%;
+top: 85%;
+cursor: pointer;
+}
+
+.search:hover{
+    scale: 1.5;
+}
+
+/* facebook */
+.fb{
+position: absolute;
+width: 20px;
+height: 20px;
+left: 74%;
+top: 85%;
+cursor: pointer;
+}
+
+.fb:hover{
+    scale: 1.5;
+}
+/* Don't have an account?Sign Up here! */
+.acc{
+position: absolute;
+left:60%;
+top: 90%;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 1.1rem;
+line-height: 29px;
+color: rgba(0, 0, 0, 0.9);
+} 
+
+@media screen and (max-width: 462px) {
+    body{
+        overflow:visible;
+        height: 100%;
+        width: 100%;
+    }
+}
