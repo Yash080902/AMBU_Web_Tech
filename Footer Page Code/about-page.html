@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Footer Page</title>
+
+  <!-- link for an external css -->
+
+  <link rel="stylesheet" href="about-page.css">  
+
+    
+</head>
+<body>
+
+   <!-- Footer Section -->
+
+  <div class="footer">
+
+    <!-- Footer Main Header Section -->
+    <div class="footer-header">
+      <div class="footer-img">
+
+        <!-- main footer header image of india-->
+        <img src="footer-page-images/india.png" alt="" />
+      </div>
+
+      <!-- footer quote -->
+      <div class="ambu-footer-quote">
+
+        <!-- foooter header quote  -->
+        <h3>India's First Unified Health Care Software</h3>
+      </div>
+    </div>
+
+    <!-- Reach Us section -->
+
+    <div class="us">
+
+      <div class="know-us">
+
+        <!-- know us section that contains our general links -->
+        <h2>Know Us</h2>
+        <p><a href="#">HOME</a></p>
+        <p><a href="#">Profile</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Services</a></p>
+      </div>
+
+      <div class="services">
+
+        <!-- services section which are provided by our company -->
+        <h2>Services</h2>
+        <p><a href="#">ALS Ambulance</a></p>
+        <p><a href="#">BLS Ambulance</a></p>
+        <p><a href="#">PTS Ambulance</a></p>
+        <p><a href="#">Mortality Ambulance</a></p>
+      </div>
+
+      <div class="contact-with-us">
+
+        <!-- contact with us section which provide user to contact with us -->
+        <h2>
+          Contact with us
+        </h2>
+
+        <!-- contact us button -->
+        <button type="button"  onclick="contactButton()">Contact Us</button>
+
+        <!-- query form popup -->
+          <div id="contact-us-popup">
+            <h2>Query Form</h2>
+            <img onclick="backfunc()" src="footer-page-images/back-img.png" alt="">
+          
+            <!-- popup form where user fill their query -->
+            <form action="" method="get">
+                <input type="text" name="" id="" placeholder="Enter Name">
+                <input type="text" name="" id="" placeholder="Enter Email/Phone No."><br>
+                <select name="content" id="query-content">
+                  <option value="a">ambulance</option>
+                  <option value="b">medicines</option>
+                  <option value="c">services</option>
+                </select><br>
+                <input type="text" name="" id="" placeholder="Descrption in detail">
+                <button type="button" onclick="submitfunc()">Submit</button>
+            </form>
+         </div>
+
+         <!-- thanks popup after submittin user's query -->
+         <div id="thanks-popup">
+                <img src="footer-page-images/thanks-img.png" alt="">
+                <h1>Thanks For Contacting Us</h1>
+                <p>Our team get back to you shortly</p>
+                <button type="button" onclick="browsefunc()">Stay tuned</button>
+        </div>
+      </div>
+
+      <div class="contact-us">
+
+        <h2>Contact Us</h2>
+
+        <!-- our main branch address -->
+          <div class="address">
+            <abbr title="Company address">
+            <img src="footer-page-images/google-maps.png" alt="" />
+            <p><a href="geo:28.752470765577947, 77.49913956776183" target="_blank" class="add">4th Floor TBI KIET Group of Institutions Ghaziabad Delhi NCR 201206</a></p>
+            </abbr>
+          </div>
+
+          <!-- our contact mail -->
+          <div class="mail">
+            <abbr title="Comapany email-Id">
+              <img src="footer-page-images/gmail.png" alt=""/>
+              <p><a href="mailto:official.ambuvians@gmail.com">official.ambuvians@gmail.com</a></p>
+            </abbr> 
+          </div>
+
+          <!-- our telephone number -->
+          <div class="phone">
+            <abbr title="Company contact number">
+            <img src="footer-page-images/telephone.png" alt=""/>
+              <section>
+                <p><a href="tel:+7505853812">7505853812</a></p>
+                <p><a href="tel:+8630729931">8630729931</a></p>
+              </section>
+            </abbr>
+          </div>
+
+      </div>
+
+    </div>
+
+    <!-- Connect Us Section -->
+
+    <div class="connect">
+
+      <p>Connect With Us</p>
+
+      <div class="icons">
+
+          <!-- our instagram handle -->
+        <abbr title="instagram" class="first-icon">
+          <a href="https://www.instagram.com/official.ambuvians/"  target="_blank"><img src="footer-page-images/instagram.png" alt="" /></a>
+        </abbr>
+
+          <!-- our whatsapp handle-->
+        <abbr title="whatsapp"  class="second-icon">
+          <a href="https://wa.me/+7505853812" target="_blank"><img src="footer-page-images/whatsapp.png" alt="" /></a>
+        </abbr>
+
+          <!-- our twitter handle -->
+        <abbr title="twitter" class="third-icon">
+          <a href="#"><img src="footer-page-images/twitter.png" alt="" /></a>
+        </abbr>
+
+          <!-- our linkedin handle -->
+        <abbr title="linkedin" class="fourth-icon">
+          <a href="https://www.linkedin.com/company/ambuvians-healthcare-pvt-ltd/?viewAsMember=true" target="_blank"><img src="footer-page-images/linkedin.png" alt="" /></a>
+        </abbr>
+
+      </div>
+    </div>
+
+    <!-- Download section -->
+
+    <div class="download">
+
+        <!-- download our app from appstore -->
+      <div class="appstore">
+        <abbr title="app-store">
+            <img src="footer-page-images/app-store.jpg" alt=""/>
+        </abbr>
+      </div>
+
+        <!-- download our app from playstore -->
+      <div class="playstore">
+        <abbr title="play-store">
+            <img src="footer-page-images/play-store.png" alt=""/>
+        </abbr>
+      </div>
+
+    </div>
+
+    <!-- Copyright Section -->
+
+    <div class="copyright">
+      <p>copyright @2023 AMBU Organisation</p>
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+  
+  <!-- external scripting for our webpage -->
+<script src="about-page.js"></script>
+
+
+</body>
+</html>

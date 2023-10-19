@@ -1,0 +1,535 @@
+
+/* external url for the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kadwa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* predefineing the colors for our webpages */
+
+:root {
+  --bg-color: #fff;
+  --main-color: #29fd53;
+  --text-color: #000000;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* for hide side scrollbar icon */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* footer section css code */
+  
+  .footer {
+    background-image: linear-gradient(#0f2831, #37414c, #5361a6);
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  /* footer header */
+  
+  .footer-header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ambu-footer-quote h3{
+    color: white;
+    font-family: kadwa;
+    font-size: 0.8em;
+    font-size: 10px;
+    margin: 8px 0px 8px 0px;
+    text-align: center;
+  }
+
+  /* Us section like (know us, services, contact with us, contact us section) */
+
+  .us {
+    font-family: inter;
+  }
+
+  /* contact with us section */
+
+  .us .contact-with-us {
+    font-size: 15px;
+    flex: 35%;
+    position: relative;
+    
+  }
+
+  .us .contact-with-us button {
+    background: rgb(211,78,227);
+    background: linear-gradient(90deg, rgba(211,78,227,1) 0%, rgba(4,51,158,1) 100%, rgba(0,223,255,1) 100%);
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    line-height: 35px;
+    margin-top: 20px;
+    text-align: center;
+    width: 160px;
+  }
+
+  #contact-us-popup {
+    background: #066899;
+    border-radius: 15px;
+    display: none;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: -300px;
+    width: 300px;
+  }
+
+  #contact-us-popup h2 {
+    color: white;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  #contact-us-popup input,select {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    width: 90%;
+  }
+
+  #contact-us-popup button {
+    background: #D0BED2;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    margin-left: 20%;
+    text-align: center;
+  }
+
+  #contact-us-popup img {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  #thanks-popup {
+    background: #066899;
+    border-radius: 15px;
+    display: none;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: -300px;
+    width: 300px;
+  }
+
+  #thanks-popup img {
+    height: 100px;
+    width: 90%;
+  }
+
+  #thanks-popup h1 {
+    font-size: 22px;
+    padding: 10px 0;
+  }
+
+  #thanks-popup button {
+    background: #D0BED2;
+    font-size: 16px;
+    margin-left: 20%;
+  }
+  
+  /* download from appstore and playstore*/
+  
+  .download {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  
+  .download img {
+    margin-right: 0px;
+  }
+  
+  .download .appstore img {
+    height: auto;
+    width: 200px;
+  }
+  
+  .download .playstore {
+    margin-top: 63px;
+  }
+  .download .playstore img {
+    height: 65px;
+    width: 180px;
+  }
+  
+  /* copy right section*/
+  
+  .copyright {
+    color: white;
+    font-size: 1vw;
+    padding: 5px;
+  }
+  
+  .contact-us img:hover {
+    cursor: pointer;
+  }
+  
+  .connect img:hover {
+    cursor: pointer;
+    scale: 1.3;
+    transition: 0.6s;
+  }
+  
+  .download img:hover {
+    cursor: pointer;
+  }
+  
+  /* different ViewPorts media queries */
+
+      /* media query for the footer section */
+  
+  /* for mobile */
+  
+  @media only screen and (max-width: 600px) {
+    .footer-header img {
+      height: 20px;
+      margin: 4px 3px 0px 0px;
+      width: 20px;
+    }
+  
+    .footer-header .ambu-footer-quote h3 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+  
+    /* us section */
+  
+    .us {
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0px 5px;
+    }
+  
+    .us a {
+      color: white;        
+      text-decoration: none;
+    }
+  
+    .us p {
+      font-size: 0.5em;
+    }
+  
+    .us p a:hover {
+      box-shadow: 1px 1px  black;
+      scale: 1.1;
+      transition: 0.4s;
+    }
+  
+    /* Know us section */
+  
+    .us .know-us {
+      flex: 25%;
+    }
+  
+    .us h2 {
+      font-size: 0.7em;
+    }
+  
+    .us img {
+      height: 20px;
+      margin-right: 5px;
+      width: 20px;
+    }
+  
+    /* services section */
+  
+    .us .services {
+      flex: 25%;
+    }
+
+    /* contact with us section */
+
+    .us .contact-with-us {
+      flex: 35%;
+      margin: 0 5px 0 10px;
+    }
+
+    .us .contact-with-us h2 {
+      font-size: 10px;
+      padding: 1.5px 0px 0 0px;
+    }
+
+    .us .contact-with-us button {
+      font-size: 11px;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 10px;
+      width:80px;
+    }
+
+    #contact-us-popup {
+      width: 225px;
+    }
+
+    #contact-us-popup h2 {
+      font-size: 18px;
+    }
+
+    #contact-us-popup button {
+      font-size: 13px;
+      margin-left: 10%;
+      width: 80%;
+    }
+
+    #thanks-popup {
+      top: -250px;
+      width: 220px;
+    }
+
+    #thanks-popup button {
+      font-size: 13px;
+      margin-left: 10%;
+      width: 80%;
+    }
+  
+    /* contact us section */
+  
+    .us .contact-us {
+      flex: 40%;
+    }
+  
+     .address abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .mail abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone img {
+      margin-top: 5px;
+    }
+  
+    /* connect from us section */
+  
+    .connect p {
+      color: white;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    .connect .icons {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    .connect img {
+      height: auto;
+      width: 25px;
+      
+    }
+  
+    /* download our app section */
+  
+    .download .appstore img {
+      border-radius: 5px;
+      height: 38px;
+      margin-right: 10px;
+      margin-top: 7px;
+      width: 120px;
+    }
+  
+    .download .playstore {
+      margin-top: 0px;
+    }
+  
+    .download .playstore img {
+      border-radius: 4px;
+      height: 46px;
+      width: 125px;
+    }
+  
+    .copyright {
+      font-size: 10px;
+    }
+  }
+
+  /* for desktop */
+  
+  @media (min-width: 601px) {
+
+    /* footer header section */
+    
+    .footer-header img {
+      height: 30px;
+      margin: 12px 3px 0px 0px;
+      width: 30px;
+    }
+  
+    .footer-header .ambu-footer-quote h3 {
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+  
+    /* contact us section */
+  
+    .us {
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0px 5px;
+    }
+  
+    .us a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  
+    .us p {
+      font-size: 1em;
+    }
+  
+    .us p a:hover {
+      box-shadow: -1px 2px 1px black;
+      scale: 1.2;
+      transition: 0.4s;
+    }
+  
+    .us .know-us {
+      flex: 35%;
+    }
+  
+    .us h2 {
+      font-size: 1.2em;
+    }
+  
+    .us img {
+      height: 20px;
+      margin-right: 5px;
+      width: 20px;
+    }
+  
+    .us .services {
+      flex: 35%;
+    }
+  
+    .us .contact-us {
+      flex: 35%;
+    }
+
+    .address abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .mail abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone abbr {
+      display: flex;
+      margin: 0px 0px;
+    }
+  
+    .phone img {
+      margin-top: 5px;
+    }
+  
+    /* connect us section */
+    
+    .connect p {
+      color: white;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      margin: 10px 0px;
+      text-align: center;
+    }
+  
+    .connect .icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  
+  
+    .connect img {
+      height: auto;
+      width: 30px;
+    }
+  
+    .connect .first-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .second-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .third-icon {
+      margin: 0px 40px;
+    }
+  
+    .connect .fourth-icon {
+      margin: 0px 40px;
+    }
+
+    /* download section */
+  
+    .download .appstore img {
+      border-radius: 5px;
+      height: 38px;
+      margin-right: 10px;
+      margin-top: 7px;
+      width: 120px;
+    }
+  
+    .download .playstore {
+      margin-top: 0px;
+    }
+  
+    .download .playstore img {
+      border-radius: 4px;
+      height: 46px;
+      width: 125px;
+    }
+  
+    /* copyright section */
+
+    .copyright {
+      font-size: 15px;
+    }
+  }
